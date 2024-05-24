@@ -1,0 +1,1860 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="tryhackme学习过程, 网安社">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>tryhackme学习过程 | 网安社</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(http://r0wf6lwny.hn-bkt.clouddn.com/0a5b1d10e93c6c615c4bce0b218a657.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    	
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">网安社</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>主页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">网安社</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			主页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">tryhackme学习过程</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/CTF/">
+                                <span class="chip bg-color">CTF</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
+                                <span class="chip bg-color">网络攻防</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/" class="post-category">
+                                网络攻防
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-10-15
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-05-23
+                </div>
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="tryhackme学习过程"><a href="#tryhackme学习过程" class="headerlink" title="tryhackme学习过程"></a>tryhackme学习过程</h1><p>tryhackme是个学习网络安全的网站，不过是英文网站，但是用起来感觉英语4级水平基本都看得懂了，不过在网络上也可以使用翻译插件来帮助阅读。</p>
+<p>tryhackme因为谷歌的人机认证没法直接注册登录 ，解决方法<a target="_blank" rel="noopener" href="http://t.csdn.cn/qlnmZ">http://t.csdn.cn/qlnmZ</a></p>
+<p>听说tryhackme有适合新手的学习路线，我用了两天发现确实如此，0基础也可以从这上手。</p>
+<p>其实从web fundamental开始学习，第一个walking an application下面的task3算是第一个真正web看源码找flag的方法。</p>
+<h1 id="web-Fundamentals"><a href="#web-Fundamentals" class="headerlink" title="web Fundamentals"></a><em><strong>web Fundamentals</strong></em></h1><hr>
+<hr>
+<p>-————————————————</p>
+<h2 id="walking-an-application"><a href="#walking-an-application" class="headerlink" title="walking an application"></a>walking an application</h2><h3 id="网页源码"><a href="#网页源码" class="headerlink" title="网页源码"></a>网页源码</h3><p>四种常见的隐藏flag的地方</p>
+<p>1.some code starting with <!-- and ending with -->these are comments</p>
+<p>2.Links to different pages in HTML are written in anchor tags ( these are HTML elements that start with &lt;a ), and the link that you’ll be directed to is stored in the href attribute.</p>
+<p>3.External files such as CSS, JavaScript and Images (directory)</p>
+<p>4.framework</p>
+<p>可以使用 HTML 代码包含外部文件，例如 CSS、JavaScript 和图像。  在此示例中，您会注意到这些文件都存储在同一个目录中。<em>这样的目录就是assets。</em></p>
+<p>  难的题有两个 &gt; 什么是目录列表标志？ 什么是框架标志？ </p>
+<p>所以下面题目的目录里的flag在/assets下，里面有个flag.txt</p>
+<hr>
+<p>框架在网页源码最底下的注释看得到。</p>
+<p><img src="/2022/10/15/tryhackme/image-20221116212240128.png" alt="image-20221116212240128"></p>
+<p>框架里的文档看得见</p>
+<p><img src="/2022/10/15/tryhackme/image-20221116212406827.png" alt="image-20221116212406827"></p>
+<p>但是在这个路径上登录后的FLAG是错误的</p>
+<p>查看更改日志，发现/tmp.zip可能有东西，然后在网站的这个路径下下载 .zip，打开后有flag</p>
+<p><img src="/2022/10/15/tryhackme/image-20221116212520864.png" alt="image-20221116212520864"></p>
+<h3 id="Developer-Tools-Inspector"><a href="#Developer-Tools-Inspector" class="headerlink" title="Developer Tools - Inspector"></a>Developer Tools - Inspector</h3><h3 id="开发工具-检查器"><a href="#开发工具-检查器" class="headerlink" title="开发工具-检查器"></a>开发工具-检查器</h3><p>火狐里的F12 查看器 即DOM和样式查看器</p>
+<p>Locate the DIV element with the class premium-customer-blocker and click on it.</p>
+<p>The style we’re interested in is the display: block. If you click on the word block, you can type a value of your own choice. Try typing none, and this will make the box disappear, revealing the content underneath it and a flag.</p>
+<p>我们感兴趣的样式是 display: block。如果单击单词块，则可以键入自己选择的值。尝试输入 no，这将使该框消失，显示其下面的内容和一个标志。</p>
+<p>浏览器自带开发工具</p>
+<p>网页源代码</p>
+<h3 id="Developer-Tools-Debugger"><a href="#Developer-Tools-Debugger" class="headerlink" title="Developer Tools - Debugger"></a>Developer Tools - Debugger</h3><h3 id="开发工具-调试器（In-Firefox-and-Safari-this-feature-is-called-Debugger-but-in-Google-Chrome-it’s-called-Sources-）"><a href="#开发工具-调试器（In-Firefox-and-Safari-this-feature-is-called-Debugger-but-in-Google-Chrome-it’s-called-Sources-）" class="headerlink" title="开发工具-调试器（In Firefox and Safari, this feature is called Debugger, but in Google Chrome, it’s called Sources.）"></a>开发工具-调试器（In Firefox and Safari, this feature is called Debugger, but in Google Chrome, it’s called Sources.）</h3><p>火狐里的F12javascript调试器 看js文件</p>
+<p>正是这一小段 JavaScript 从页面中移除了红色弹出窗口。我们可以利用调试器的另一个特性——断点。这些是代码中的点，我们可以强制浏览器停止处理 JavaScript 并暂停当前执行。</p>
+<p>We can return some of the formattings by using the “Pretty Print” option</p>
+<p>可右键美化源代码查看</p>
+<h3 id="Developer-Tools-Network"><a href="#Developer-Tools-Network" class="headerlink" title="Developer Tools - Network"></a>Developer Tools - Network</h3><h3 id="火狐里的F12网络"><a href="#火狐里的F12网络" class="headerlink" title="火狐里的F12网络"></a>火狐里的F12网络</h3><p>发送新信息时能看到</p>
+<p>request请求 response响应</p>
+<p><img src="/2022/10/15/tryhackme/wps1.jpg" alt="img"> </p>
+<hr>
+<hr>
+<h1 id="Content-Discovery"><a href="#Content-Discovery" class="headerlink" title="Content Discovery"></a><em><strong>Content Discovery</strong></em></h1><p>我们将介绍在网站上发现内容的三种主要方式。 手动、自动和 OSINT（开源情报）。</p>
+<h3 id="手动发现-Robots-txt"><a href="#手动发现-Robots-txt" class="headerlink" title="手动发现 - Robots.txt"></a>手动发现 - Robots.txt</h3><p>robots.txt 文件是一个文件，它告诉搜索引擎哪些页面可以显示，哪些页面不允许显示在搜索引擎结果中，或者禁止特定搜索引擎完全抓取该网站。</p>
+<h3 id="手动发现-Favicon"><a href="#手动发现-Favicon" class="headerlink" title="手动发现 - Favicon"></a>手动发现 - Favicon</h3><p>favicon 是一个小图标，显示在浏览器的地址栏或选项卡中，用于品牌化网站。</p>
+<p>有时 当使用框架构建网站时，作为安装一部分的 favicon 会留下来</p>
+<p>您可以使用它来检查目标 favicon <a target="_blank" rel="noopener" href="https://wiki.owasp.org/index.php/OWASP_favicon_database">https://wiki.owasp.org/index.php/OWASP_favicon_database </a></p>
+<p>打开 firefox 并输入 URL <a target="_blank" rel="noopener" href="https://static-labs.tryhackme.cloud/sites/favicon/">https://static-labs.tryhackme.cloud/sites/favicon/ </a></p>
+<p>linux上运行指令，下载MD5对比wiki上的可以看到框架是什么</p>
+<pre><code>https://static-labs.tryhackme.cloud/sites/favicon/images/favicon.ico | md5sum
+</code></pre>
+<p>您也可以在 Windows 上的 Powershell 中运行它，如下所示。 </p>
+<p> <img src="/2022/10/15/tryhackme/image-20221116214312334.png" alt="image-20221116214312334"></p>
+<h3 id="手动发现-Sitemap-xml"><a href="#手动发现-Sitemap-xml" class="headerlink" title="手动发现 - Sitemap.xml"></a>手动发现 - Sitemap.xml</h3><p>  不像  robots.txt 文件，它限制了搜索引擎爬虫可以执行的操作  看，sitemap.xml 文件给出了网站每个文件的列表  所有者希望在搜索引擎上列出。</p>
+<p>能看到许多页面</p>
+<p> <img src="/2022/10/15/tryhackme/image-20221119203842984.png" alt="image-20221119203842984"></p>
+<h3 id="手动发现-HTTP-标头"><a href="#手动发现-HTTP-标头" class="headerlink" title="手动发现 - HTTP 标头"></a>手动发现 - HTTP 标头</h3><p> 当我们向web服务器发出请求，服务器返回各种HTTP标题。 这些标头有时可以包含有用的信息，例如网络服务器软件和可能的编程/脚本语言正在使用。 </p>
+<p> 尝试运行以下 curl   针对 Web 服务器的命令，其中 <strong>-v</strong> 开关启用详细模式，这将输出标头</p>
+<pre class=" language-shell-session"><code class="language-shell-session">curl http://10.10.229.161 -v
+</code></pre>
+<h3 id="手动发现-框架堆栈"><a href="#手动发现-框架堆栈" class="headerlink" title="手动发现 - 框架堆栈"></a>手动发现 - 框架堆栈</h3><p> 一旦你已经建立了一个网站的框架，或者从上面  网站图标示例或通过在页面源代码中寻找线索，例如  评论、版权声明或学分，然后您可以找到  框架的网站。  从那里，我们可以了解有关该软件的更多信息  和其他信息，可能会导致我们可以发现更多内容 。</p>
+<h3 id="OSINT-Google-Hacking-Dorking"><a href="#OSINT-Google-Hacking-Dorking" class="headerlink" title="OSINT - Google Hacking / Dorking"></a>OSINT - Google Hacking / Dorking</h3><p> 还有可用的外部资源可以帮助发现有关目标网站的信息；  这些资源通常被称为 OSINT 或（开源情报），因为它们是收集信息的免费工具： </p>
+<p><img src="/2022/10/15/tryhackme/image-20221119205624849.png" alt="image-20221119205624849"></p>
+<p><img src="/2022/10/15/tryhackme/image-20221119205634385.png" alt="image-20221119205634385"></p>
+<h3 id="OSINT-Wappalyzer"><a href="#OSINT-Wappalyzer" class="headerlink" title="OSINT - Wappalyzer"></a>OSINT - Wappalyzer</h3><p>Wappalyzer ( <a target="_blank" rel="noopener" href="https://www.wappalyzer.com/">https://www.wappalyzer.com/ </a>)   是一个在线工具和浏览器扩展，可帮助识别什么   网站使用的技术，例如框架、内容管理   系统 (CMS)、支付处理器等等，它甚至可以找到   版本号也是如此。 </p>
+<h3 id="OSINT-Wayback-机器"><a href="#OSINT-Wayback-机器" class="headerlink" title="OSINT - Wayback 机器"></a>OSINT - Wayback 机器</h3><p> 时光机 ( <a target="_blank" rel="noopener" href="https://archive.org/web/">https://archive.org/web/ </a>)   是可追溯到 90 年代后期的网站历史档案。                               </p>
+<h3 id="OSINT-GitHub"><a href="#OSINT-GitHub" class="headerlink" title="OSINT - GitHub"></a>OSINT - GitHub</h3><p> 要了解 GitHub，首先需要了解 Git。 Git 是一个 <strong>版本控制</strong> 系统   跟踪项目中文件的更改。 </p>
+<h3 id="OSINT-S3-存储桶"><a href="#OSINT-S3-存储桶" class="headerlink" title="OSINT - S3 存储桶"></a>OSINT - S3 存储桶</h3><p> S3格式   buckets 是 http(s):// <strong>{name}.</strong> <a target="_blank" rel="noopener" href="http://s3.amazonaws.com/"><strong>s3.amazonaws.com</strong> </a>其中 {name} 由所有者决定，例如 <a target="_blank" rel="noopener" href="http://tryhackme-assets.s3.amazonaws.com/">tryhackme-assets.s3.amazonaws.com </a>。   可以通过多种方式发现 S3 存储桶，例如在   网站的页面源代码、GitHub 存储库，甚至自动化   过程。 一种常见的自动化方法是使用公司名称   后跟常用术语，例如 <strong>{name}</strong> -assets、 <strong>{name}</strong> -www、 <strong>{name}</strong> -public、 <strong>{name}</strong> -private 等。 </p>
+<h3 id="自动发现"><a href="#自动发现" class="headerlink" title="自动发现"></a>自动发现</h3><p><strong>什么是自动发现？</strong> </p>
+<p>自动发现是使用工具而不是手动发现内容的过程。  这个过程是自动化的，因为它通常包含对 Web 服务器的数百、数千甚至数百万个请求。   这些请求检查网站上是否存在文件或目录，使我们能够访问我们以前不知道存在的资源。  这个过程是通过使用一个叫做 wordlists  的资源来实现的。 </p>
+<p><strong>什么是词表？</strong> </p>
+<p>单词列表只是包含一长串常用单词的文本文件； 它们可以涵盖许多不同的用例。 例如，密码词列表将包括最常用的密码，而我们正在寻找我们案例中的内容，因此我们需要一个包含最常用目录和文件名的列表。 THM AttackBox 上预装的一个很好的单词列表资源是 <a target="_blank" rel="noopener" href="https://github.com/danielmiessler/SecLists">https://github.com/danielmiessler/SecLists </a>，它由 Daniel Miessler 策划。 </p>
+<p><strong>自动化工具</strong> </p>
+<p>尽管有许多不同的内容发现工具可用，但它们各有特点和缺陷，我们将介绍三种预装在我们的攻击盒上的工具，ffuf、dirb 和 gobuster。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221119212351410.png" alt="image-20221119212351410"></p>
+<p>在KALI上试了一下，ffuf和dirb是KALI自带的，gobuster没有自带</p>
+<h1 id="Burp-Suite-Basics"><a href="#Burp-Suite-Basics" class="headerlink" title="Burp Suite Basics"></a>Burp Suite Basics</h1><p> 简单地说：Burp Suite 是一个用 Java 编写的框架，旨在为 Web 应用程序渗透测试提供一站式服务。 </p>
+<p> 在最简单的层面上，Burp 可以捕获和操纵攻击者与网络服务器之间的所有流量：这是框架的核心。 </p>
+<p><strong>proxy:</strong> Burp Suite 最著名的方面，Burp 代理允许我们在与 Web 应用程序交互时拦截和修改请求/响应。 </p>
+<p><strong>Repeater：</strong> 第二个最著名的 Burp 功能——Repeater—— 允许我们多次捕获、修改然后重新发送相同的请求。 试验（例如在 SQLi –  Structured Query Language Injection ）或测试端点功能的缺陷时来制作有效载荷时。 </p>
+<p><strong>Intruder：</strong> 虽然在 Burp 社区中严格限制速率，但 <a target="_blank" rel="noopener" href="https://tryhackme.com/room/burpsuiteintruder">Intruder </a>允许我们向端点发送请求。 这通常用于暴力攻击或模糊端点。 </p>
+<p><strong>Decoder：</strong> 虽然不如前面提到的功能使用得少，但 <a target="_blank" rel="noopener" href="https://tryhackme.com/room/burpsuiteom">解码器 </a>在转换数据时仍然提供有价值的服务——无论是解码捕获的信息，还是在将有效负载发送到目标之前对其进行编码。 虽然有其他服务可用于完成相同的工作，但直接在 Burp Suite 中执行此操作会非常高效。 </p>
+<p><strong>Comparer：</strong> 顾名思义， <a target="_blank" rel="noopener" href="https://tryhackme.com/room/burpsuiteom">Comparer </a>允许我们在字或字节级别比较两份数据。 同样，这不是 Burp Suite 独有的东西，但是能够使用单个键盘快捷键将（可能非常大的）数据直接发送到比较工具中可以大大加快速度。 </p>
+<p><strong>Sequencer：</strong> 我们通常在评估令牌的随机性时使用 <a target="_blank" rel="noopener" href="https://tryhackme.com/room/burpsuiteom">Sequencer </a>，例如会话 cookie 值或其他假定随机生成的数据。 如果算法没有生成安全的随机值，那么这可能会为攻击开辟一些毁灭性的途径。 </p>
+<h3 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h3><p>任务菜单允许我们定义 Burp Suite 在我们使用应用程序时将运行的后台任务。  专业版还允许我们创建按需扫描。  默认的“Live Passive Crawl”（自动记录我们访问的页面）将非常适合我们在此模块中的使用。 </p>
+<p>事件日志告诉我们 Burp Suite 在做什么（例如启动代理），以及我们通过 Burp 建立的任何连接的信息。 </p>
+<p>问题活动部分是 Burp Pro 独有的。  使用 Burp Community 它不会给我们任何东西，但在 Burp Professional  中它会列出自动扫描器发现的所有漏洞。  这些将按严重程度排名，并可根据 Burp 确定该组件易受攻击的程度进行过滤。 </p>
+<p>咨询部分提供了有关发现的漏洞的更多信息，以及参考和建议的补救措施。  然后可以将这些导出到报告中。<br>单击 Issue Activity 部分中的示例漏洞之一可以让我们了解它的外观： </p>
+<p> <img src="/2022/10/15/tryhackme/11202e4c73faa30a757f1439b63b85c6.png"> </p>
+<h3 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h3><p>默认情况下，在 Burp Suite GUI 中导航完全是使用顶部菜单栏完成的： </p>
+<p><img src="/2022/10/15/tryhackme/image-20221120104035853.png" alt="image-20221120104035853"></p>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><p>在我们开始学习 Burp 代理之前，让我们看一下可用于配置 Burp Suite 的选项。 </p>
+<ul>
+<li>可以在 <em>用户选项</em> 顶部菜单栏 </li>
+<li>可以在“ <em>项目选项”选项</em> 。 </li>
+</ul>
+<h3 id="Burp-Proxy介绍"><a href="#Burp-Proxy介绍" class="headerlink" title="Burp Proxy介绍"></a>Burp Proxy介绍</h3><p>Burp Proxy 是 Burp Suite 中可用的最基本（也是最重要！）的工具。  它允许我们捕获我们自己和我们的目标之间的请求和响应。  然后可以对它们进行操作或将其发送到其他工具进行进一步处理，然后再继续前往目的地。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221120105435570.png" alt="image-20221120105435570"></p>
+<p>当拦截关闭时，Burp Suite 仍将（默认情况下）记录通过代理发出的请求。  这对于回溯和分析先前的请求非常有用，即使我们没有在请求发出时专门捕获它们。 </p>
+<p>Burp 还将捕获和记录 WebSocket 通信，这在分析 Web 应用程序时再次非常有用。 </p>
+<p>可以通过转到“HTTP 历史记录”和“WebSockets 历史记录”子选项卡来查看日志：</p>
+<p> 值得注意的是，在这里捕获的任何请求都可以通过右键单击它们并选择“发送到…”来发送到框架中的其他工具。 例如，我们可以将之前 HTTP 已经代理到目标 <a target="_blank" rel="noopener" href="https://tryhackme.com/room/burpsuiterepeater">Repeater </a>。  </p>
+<h3 id="通过代理连接（FoxyProxy）"><a href="#通过代理连接（FoxyProxy）" class="headerlink" title="通过代理连接（FoxyProxy）"></a>通过代理连接（FoxyProxy）</h3><p>你已经看到了这个理论；  现在是时候开始为自己使用代理了。 </p>
+<p>有两种方法可以通过 Burp Suite 代理我们的流量。 </p>
+<ol>
+<li>我们可以使用嵌入式浏览器（ <strong>我们将在稍后的任务中介绍</strong> ）。 </li>
+<li>我们可以配置我们的本地网络浏览器来通过 Burp 代理我们的流量；  这种情况更为常见，因此将成为本任务的重点。 </li>
+</ol>
+<hr>
+<p>Burp 代理通过打开一个 Web 界面来工作 <code>127.0.0.1:8080</code>（默认）。 正如这是一个“代理”这一事实所暗示的，在我们开始使用 Burp 拦截它之前，我们需要通过该端口重定向所有浏览器流量。 我们可以通过更改浏览器设置或更常见的方法是使用名为 <a target="_blank" rel="noopener" href="https://getfoxyproxy.org/">FoxyProxy </a>。</p>
+<p> <em><strong>请记住：</strong></em>  <em>当您连接到代理并打开代理拦截时，只要您发出请求，您的浏览器就会挂起。 当您学习使用 Burp Suite（事实上，后来！）时，一个非常常见的错误是不小心将拦截打开，因此无法通过浏览器发出任何 Web 请求。  如果您的浏览器挂起而您不知道原因：请检查您的代理！</em>  </p>
+<h3 id="代理-HTTPS"><a href="#代理-HTTPS" class="headerlink" title="代理 HTTPS"></a>代理 HTTPS</h3><p>我们得到一个错误。 </p>
+<p>具体来说，Firefox 告诉我们 Portswigger <strong>ertificate</strong> C <strong>A</strong> uthority (CA) 无权保护连接。 </p>
+<p>幸运的是，Burp 为我们提供了一个简单的方法来解决这个问题。  我们需要让 Firefox 信任由 Portswigger 证书保护的连接，因此我们将手动将 CA 证书添加到我们的受信任证书颁发机构列表中。 </p>
+<p>首先，在激活代理的情况下前往 <a target="_blank" rel="noopener" href="http://burp/cert">http://burp/cert </a>； 这将下载一个名为 <code>cacert.der</code>– 将其保存在您机器上的某个位置。 </p>
+<p> 接下来，键入 <code>about:preferences</code>进入您的 Firefox 搜索栏并按回车键；  这会将我们带到 FireFox 设置页面。  在页面中搜索“证书”，我们找到“查看证书”的选项：  </p>
+<p>单击“查看证书”按钮允许我们查看所有受信任的 CA 证书。  我们可以通过按“导入”并选择我们刚刚下载的文件来为 Portswigger 注册一个新证书。 </p>
+<p>在弹出的菜单中，选择“信任这个CA来识别网站”，然后点击确定： </p>
+<h3 id="Burp-Suite-浏览器"><a href="#Burp-Suite-浏览器" class="headerlink" title="Burp Suite 浏览器"></a>Burp Suite 浏览器</h3><p>如果最后几项任务看起来过于复杂，请放心，这个主题会简单很多。 </p>
+<p>除了为我们提供修改常规 Web 浏览器以使用代理的选项之外，Burp Suite 还包括一个内置的 Chromium 浏览器，该浏览器已预先配置为使用代理，而无需我们进行任何修改。 </p>
+<p>虽然这看起来很理想，但它并不像前几个任务中详述的过程那样常用。  人们倾向于坚持使用自己的浏览器，因为它为他们提供了更多的可定制性；  但是，两者都是完全有效的选择。 </p>
+<p>我们可以使用代理选项卡中的“打开浏览器”按钮启动 Burp 浏览器：<img src="/2022/10/15/tryhackme/image-20221120111221520.png" alt="image-20221120111221520"></p>
+<p>现在将弹出一个 Chromium 窗口。  我们在此提出的任何请求都将通过代理。 </p>
+<p><em><strong>注意：</strong> 在项目选项和用户选项选项卡中有许多与 Burp 浏览器有关的设置——一定要看看它们！</em> </p>
+<h3 id="范围和目标"><a href="#范围和目标" class="headerlink" title="范围和目标"></a>范围和目标</h3><p>最后，我们来到使用 Burp 代理最重要的部分之一：范围。 </p>
+<p>让 Burp 捕获我们所有的流量会变得非常乏味。 当它记录所有内容（包括我们未定位的网站的流量）时，它会混淆我们稍后可能希望发送给客户的日志。 简而言之，让 Burp 捕获 <em>所有内容</em> 会很快变成一个巨大的痛苦。 </p>
+<p>解决办法是什么？  范围界定。 </p>
+<p>为项目设置范围允许我们定义代理和记录的内容。 我们可以将 Burp Suite 限制为 <em>仅</em>   针对我们要测试的 Web 应用程序。 最简单的方法   这是通过切换到“目标”选项卡，右键单击我们的目标   从我们左侧的列表中，然后选择“添加到范围”。 然后打嗝会问   我们是否要停止记录任何不在范围内的内容——大多数   的时候我们要在这里选择“是”。 </p>
+<p><img src="/2022/10/15/tryhackme/7e11c5dec4dba4336927aa7561e5c793.gif" alt="7e11c5dec4dba4336927aa7561e5c793"> </p>
+<p> 我们只是选择禁用 <em>日志记录</em> ，但代理仍会拦截所有内容。 要关闭此功能，我们需要进入“代理选项”子选项卡并选择“ <code>And</code> <code>URL</code> <code>Is in target scope</code>“来自拦截客户端请求部分：  </p>
+<p><img src="/2022/10/15/tryhackme/image-20221120200812210.png" alt="image-20221120200812210"></p>
+<p> 选择此选项后，代理将完全忽略任何不在范围内的内容，从而极大地清理通过 Burp 的流量。  </p>
+<h3 id="站点地图和问题定义"><a href="#站点地图和问题定义" class="headerlink" title="站点地图和问题定义"></a>站点地图和问题定义</h3><p>范围控制可能是 Target 选项卡最有用的方面，但它绝不是 Burp 这一部分的 <em>唯一</em> 用途。 </p>
+<p>下有三个子选项卡 <em>Target</em> ： </p>
+<ul>
+<li><p><strong>站点地图sitemap</strong> 允许我们在树结构中绘制出我们定位的应用程序。 我们访问的每个页面都会显示在这里，使我们能够通过浏览网络应用程序自动为目标生成站点地图。 Burp Pro  还允许我们自动抓取目标（即查看每个页面的链接并使用它们绘制出尽可能多的网站——使用页面之间的链接可公开访问）； 但是，使用 Burp  Community，我们仍然可以在执行初始枚举步骤时使用它来积累数据。<br>如果我们想要映射 API，站点地图会特别有用，因为每当我们访问页面时，页面在加载时从中检索数据的任何 API 端点都会显示在这里。 </p>
+</li>
+<li><p><strong>范围：</strong> 我们已经看到范围子选项卡——它允许我们控制项目的 Burp 目标范围。 </p>
+</li>
+<li><p><strong>问题定义：</strong> 虽然我们无法访问 Burp 社区中的 Burp Suite 漏洞扫描程序，但我们仍然可以访问它查找的所有漏洞的列表。 问题定义部分为我们提供了大量的 Web 漏洞列表（包括描述和参考），如果我们需要引用报告或帮助描述漏洞，我们可以从中提取。 </p>
+<p>  <strong>题目：</strong>访问从主页链接到的每个页面，然后检查您的站点地图——一个端点应该非常不寻常地脱颖而出！  </p>
+<p>在target下面的sitemap里能直接看到一个网址下面的所有相关链接，发现这第一个很独特，进去后直接就看得到FLAG</p>
+<p><img src="/2022/10/15/tryhackme/image-20221122210847211.png" alt="image-20221122210847211"></p>
+</li>
+</ul>
+<h3 id="示例攻击"><a href="#示例攻击" class="headerlink" title="示例攻击"></a>示例攻击</h3><p>尝试输入：</p>
+<pre><code>&lt;script&gt;alert(&quot;Succ3ssful XSS&quot;)&lt;/script&gt;
+</code></pre>
+<p>, 进入“联系人电子邮件”字段。  您应该会发现有一个客户端过滤器可以防止您添加电子邮件地址中不允许的任何特殊字符：</p>
+<p>​                                                             </p>
+<p>现在，在支持表格中输入一些合法数据。  例如：  “<a href="mailto:&#112;&#x65;&#110;&#x74;&#x65;&#x73;&#116;&#101;&#x72;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x74;&#104;&#x6d;">&#112;&#x65;&#110;&#x74;&#x65;&#x73;&#116;&#101;&#x72;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x74;&#104;&#x6d;</a>”作为电子邮件地址，“Test Attack”作为  询问。 </p>
+<p>提交表单——请求应该被代理拦截。 </p>
+<p>通过在代理中捕获请求，我们现在可以将电子邮件字段更改为我们上面非常简单的有效负载： </p>
+<pre><code>&lt;script&gt;alert(&quot;Succ3ssful XSS&quot;)&lt;/script&gt;
+</code></pre>
+<p>.  粘贴 payload 后，我们需要选择它，然后使用 URL 对其进行编码 <code>Ctrl + U</code>使发送安全的快捷方式。  此过程显示在下面的 GIF 中：   （右键选择URL编码输入也可，ctrl+u是其热键）<img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/58c5bf5382cdee55ab12e0752d819ebe.gif" alt="GIF 演示拦截和 URL 编码粘贴的有效载荷的解释过程"> </p>
+<h2 id="Burp：Repeater"><a href="#Burp：Repeater" class="headerlink" title="Burp：Repeater"></a>Burp：Repeater</h2><h3 id="什么是中继器？"><a href="#什么是中继器？" class="headerlink" title="什么是中继器？"></a>什么是中继器？</h3><p>在我们开始使用 Repeater 之前，了解它的作用会很有帮助</p>
+<p> 这意味着我们可以获取在 Proxy 中捕获的请求，对其进行编辑，并根据需要多次重复发送相同的请求。 </p>
+<p>Repeater 界面可以分为六个主要部分——可以在以下要点下方找到带注释的图表： </p>
+<ol>
+<li>在选项卡的最左上角，我们有一个 Repeater 请求列表。  我们可以有许多不同的请求通过 Repeater：每次我们向 Repeater 发送新请求时，它都会出现在这里。 </li>
+<li>在请求列表的正下方，我们有当前请求的控件。  这些允许我们发送请求、取消挂起的请求以及在请求历史记录中前进/后退。 </li>
+<li>仍然在选项卡的左侧，但占据了大部分窗口，我们有请求和响应视图。  我们在请求视图中编辑请求，然后按发送。  响应将显示在 Response 视图中。 </li>
+<li>在请求/响应部分的上方，右侧是一组选项，允许我们更改请求和响应视图的布局。  默认情况下，这通常是并排的（水平布局，如屏幕截图所示）；  但是，我们也可以选择将它们放在彼此的上方/下方（垂直布局）或放在单独的选项卡中（组合视图）。 </li>
+<li>在窗口的右侧，我们有检查器，它允许我们将请求分开，以比使用原始编辑器更直观的方式分析和编辑它们。  我们将在稍后的任务中介绍这一点。 </li>
+<li>最后，在 Inspector 上方我们有我们的目标。  很简单，这是我们向其发送请求的 IP 地址或域。  当我们从 Burp Suite 的其他部分向 Repeater 发送请求时，这将被自动填写。 </li>
+</ol>
+<p> <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/631e09c2296fbc8d73ed38afa9705a50.png" alt="中继器接口注释图"> </p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>我们现在知道界面是什么样子的，但是我们如何使用它呢？ </p>
+<p>虽然我们 <em>可以</em> 手工制作请求，但更常见的做法是简单地在代理中捕获请求，然后将其发送到 Repeater 进行编辑/重新发送。 </p>
+<p>通过在代理中捕获请求，我们可以通过右键单击请求并选择“发送到中继器”或按 <code>Ctrl + R</code>. </p>
+<p>切换回 Repeater，我们可以看到我们的请求现在可用： </p>
+<p> target 和 Inspector 元素现在也显示信息；  然而，我们还没有得到回应。  当我们点击“发送”按钮时，响应部分会快速填充： </p>
+<p><img src="/2022/10/15/tryhackme/image-20221120204917290.png" alt="image-20221120204917290"></p>
+<p>如果我们想更改有关请求的任何内容，我们只需在请求窗口中键入并再次按“发送”即可；  这将更新右侧的响应。  例如，将“连接”标头更改为 <code>open</code>而不是 <code>close</code>导致响应“Connection”标头的值为 <code>keep-alive</code>: </p>
+<p> <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/67d1462106edc86bd676315b3c0cba08.png" alt="更改 Connection 标头会导致不同的响应，服务器现在保持连接有效"> </p>
+<p> 然后我们还可以使用发送按钮右侧的历史按钮在我们的修改历史中前进和后退。 </p>
+<h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>Repeater 为我们提供了多种方式来呈现对我们请求的响应——这些方式从十六进制输出一直到页面的完全渲染版本。 </p>
+<p>我们可以通过查看响应框上方来查看可用选项： </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/635ad62b0204b104bbd58489716eccde.png" alt="响应文本上方的四个视图按钮"></p>
+<p>我们这里有四个显示选项： </p>
+<ol>
+<li><strong>漂亮：</strong> 这是默认选项。 它采用原始响应并尝试稍微美化它，使其更易于阅读。 </li>
+<li><strong>原始：</strong> 来自服务器的纯净、未美化的响应。 </li>
+<li><strong>十六进制：</strong> 此视图采用原始响应并为我们提供了它的字节视图——如果响应是二进制文件，则特别有用。 </li>
+<li><strong>呈现：</strong> 呈现视图呈现页面，就像它在浏览器中显示的那样。 虽然用处不大 <em>，</em> 考虑到我们在使用 Repeater 时通常会对源代码感兴趣，因此 </li>
+</ol>
+<p>在大多数情况下，“Pretty”选项就足够了；  但是，仍然值得了解如何使用其他三个选项。 </p>
+<p> 视图按钮的右侧是“显示不可打印字符”按钮（ <code>\n</code>).  这个按钮允许我们显示通常不会出现在 Pretty 或 Raw 视图中的字符。  例如，响应中的每一行都将以字符结尾 <code>\r\n</code>– 这些表示回车符后跟换行符，并且是 HTTP 标头解释方式的一部分。  </p>
+<p><img src="/2022/10/15/tryhackme/image-20221120205313806.png" alt="image-20221120205313806"></p>
+<p>​                                                            </p>
+<p>哪个视图选项以与您的浏览器相同的格式显示响应？ -Render</p>
+<h3 id="检查员"><a href="#检查员" class="headerlink" title="检查员"></a>检查员</h3><p>在许多方面，Inspector 完全是对 Repeater 窗口的请求和响应字段的补充</p>
+<p>Inspector 可以在 Proxy 和 Repeater 中使用。  在这两种情况下，它都出现在窗口的最右侧，并为我们提供了请求和响应中的组件列表：<br><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/c365f42b324b823dfc928c28f3c41214.png" alt="显示 Inspector 中可用组件的屏幕截图"></p>
+<p>其中，请求部分几乎总是可以更改，允许我们添加、编辑和删除项目。  例如，在 Request Attributes 部分，我们可以编辑请求中处理位置、方法和协议的部分；  例如，更改我们要检索的资源，将请求从 GET 更改为另一种 HTTP 方法，或将协议从 HTTP/1 切换到 HTTP/2： </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/4f3a0f3714ceebbd6016e077369b48e8.png" alt="显示请求属性部分布局的屏幕截图。"></p>
+<p>可用于查看和/或编辑的其他部分是： </p>
+<ul>
+<li><strong>查询参数</strong> ，指的是在 URL 中发送到服务器的数据。 例如，在 GET 请求中 <code>https://admin.tryhackme.com/?redirect=false</code>，有一个名为“redirect”的查询参数，其值为“false”。 </li>
+<li><strong>Body Parameters</strong> ，它与 Query Parameters 做同样的事情，但用于 POST 请求。 我们在 POST 请求中作为数据发送的任何内容都将显示在此部分中，再次允许我们在重新发送之前修改参数。 </li>
+<li><strong>请求 Cookie</strong> 如您所料， </li>
+<li><strong>请求标头</strong> 允许我们查看、访问和修改（包括完全添加或删除）与我们的请求一起发送的任何标头。 尝试查看 Web 服务器将如何响应意外标头时，编辑这些内容非常有用。 </li>
+<li><strong>Response Headers</strong> 向我们显示服务器响应我们的请求发回的标头。 这些无法编辑（因为我们无法控制服务器返回给我们的标头！）。 请注意，此部分只会在我们发送请求并收到响应后显示。 </li>
+</ul>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p> 使用 Inspector（或手动，如果你愿意的话），添加一个名为 <code>FlagAuthorised</code>并将它的值设置为 <code>True</code>.  例如。：     </p>
+<p><img src="/2022/10/15/tryhackme/image-20221121214012519.png" alt="image-20221121214012519">                                                                                            </p>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p>前往 <code>http://10.10.51.145/products/</code>并尝试点击一些“查看更多”链接。 </p>
+<p>您是否注意到它会将您重定向到一个数字端点（例如 <code>/products/3</code>) 当您单击以获取更多详细信息时？ </p>
+<p>通过将请求末尾的数字更改为极端输入，看看是否可以让服务器出现“500 Internal Server Error”代码错误。 </p>
+<p>类似-1这样才能出来500，如果输入数字过大都是404。而且要在第一行GET这里改变数字，下面的Upgrade-Insecure-Requests之类的都不行</p>
+<p><img src="/2022/10/15/tryhackme/image-20221122202152802.png" alt="image-20221122202152802"></p>
+<p><img src="/2022/10/15/tryhackme/image-20221122202206922.png" alt="image-20221122202206922"></p>
+<h3 id="SQLi-with-Repeater"><a href="#SQLi-with-Repeater" class="headerlink" title="SQLi with Repeater"></a>SQLi with Repeater</h3><h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><p> SQL（结构化查询语言）注入，通常称为 SQLi，是对 Web  应用程序数据库服务器的攻击，会导致执行恶意查询。  当 Web  应用程序使用未经正确验证的用户输入与数据库通信时，攻击者有可能窃取、删除或更改私人和客户数据，并攻击 Web  应用程序的身份验证方法以获取私有信息或客户区。  这就是为什么 SQLi 不仅是最古老的 Web 应用程序漏洞之一，而且也是最具破坏性的。 </p>
+<h3 id="什么是-SQL-注入？"><a href="#什么是-SQL-注入？" class="headerlink" title="什么是 SQL 注入？"></a>什么是 SQL 注入？</h3><p>当用户提供的数据被包含在 SQL 查询中时，使用 SQL 的 Web 应用程序可以变成 SQL 注入。 </p>
+<p><strong>它是什么样子的？</strong><br>假设您遇到了一个在线博客，并且每个博客条目都有一个唯一的 ID 号。  博客条目可以设置为公开或私有，具体取决于它们是否准备好公开发布。  每个博客条目的 URL 可能如下所示： </p>
+<pre><code>https://website.thm/blog?id=1
+</code></pre>
+<p>从上面的 URL 中，您可以看到选择的博客条目来自查询字符串中的 id 参数。  Web 应用程序需要从数据库中检索文章，并且可能会使用如下所示的 SQL 语句： </p>
+<pre><code>SELECT * from blog where id=1 and private=0 LIMIT 1;
+</code></pre>
+<p>根据你在上一个任务中学到的知识，你应该能够计算出上面的 SQL 语句是在 blog 表中查找 id 号为 1 且私有列设置为 0 的文章，这意味着它能够供公众查看，并将结果限制为只有一场比赛。 </p>
+<p>正如本任务开始时提到的，当用户输入被引入数据库查询时，就会引入 SQL 注入。  在此实例中，查询字符串中的 id 参数直接用于 SQL 查询。 </p>
+<p>假设文章 id 2 仍被锁定为私有，因此无法在网站上查看。  我们现在可以改为调用 URL： </p>
+<p><code>https://website.thm/blog?id=2;--</code></p>
+<p>然后依次生成 SQL 语句： </p>
+<pre><code>SELECT * from blog where id=2;-- and private=0 LIMIT 1;
+</code></pre>
+<p><strong>URL 中的分号表示 SQL 语句的结束，两个破折号使之后的所有内容都被视为注释</strong> 。 通过这样做，您实际上只是在运行查询： </p>
+<pre><code>SELECT * from blog where id=2;--
+</code></pre>
+<p>这将返回 id 为 2 的文章，无论它是否设置为公开。 </p>
+<p>这只是一种称为带内 SQL 注入的 SQL 注入漏洞的一个示例；  In-Band, Blind 和 Out Of Band 总共有 3 种类型，我们将在接下来的任务中讨论。 </p>
+<h3 id="In-Band-SQL-Injection"><a href="#In-Band-SQL-Injection" class="headerlink" title="In-Band SQL Injection"></a><strong>In-Band SQL Injection</strong></h3><p><strong>带内 SQL 注入</strong> </p>
+<p>带内 SQL 注入是最容易检测和利用的类型；  In-Band 只是指使用相同的通信方法来利用漏洞并接收结果，例如，在网站页面上发现 SQL 注入漏洞，然后能够从数据库中提取数据到同一页面。 </p>
+<p><strong>基于错误的 SQL 注入</strong> </p>
+<p>这种类型的 SQL 注入对于轻松获取有关数据库结构的信息最有用，因为来自数据库的错误消息会直接打印到浏览器屏幕。  这通常可用于枚举整个数据库。 </p>
+<p><strong>基于联合的 SQL 注入</strong> </p>
+<p>这种类型的注入利用 SQL UNION 运算符和 SELECT 语句将其他结果返回到页面。  此方法是通过 SQL 注入漏洞提取大量数据的最常用方法。 </p>
+<p>发现基于错误的 SQL 注入的关键是通过尝试某些字符来破坏代码的 SQL 查询，直到产生错误消息；  这些最常见的是单撇号 (‘) 或引号 (“)。 </p>
+<p>尝试 <strong>‘</strong> 在 id=1 后 您会看到这会返回一个 SQL 错误，通知您语法中有错误。 您收到此错误消息的事实证实了 SQL 注入漏洞的存在。 我们现在可以利用此漏洞并使用错误消息来了解有关数据库结构的更多信息。 </p>
+<p>我们需要做的第一件事是将数据返回给浏览器而不显示错误消息。  首先，我们将尝试 UNION 运算符，以便我们可以接收到我们选择的额外结果。首先，我们将尝试 UNION 运算符，以便我们可以接收到我们选择的额外结果。  尝试将模拟浏览器 id 参数设置为： </p>
+<pre><code>1 UNION SELECT 1
+</code></pre>
+<p>此语句应产生一条错误消息，通知您 UNION SELECT 语句的列数与原始 SELECT 查询的列数不同。  因此，让我们再试一次，但添加另一列： </p>
+<pre><code>1 UNION SELECT 1,2
+</code></pre>
+<p>同样的错误，所以让我们通过添加另一列来重复： </p>
+<pre><code>1 UNION SELECT 1,2,3
+</code></pre>
+<p>成功，错误消息消失了，正在显示文章，但现在我们想显示我们的数据而不是文章。  显示该文章是因为它在网站代码的某处获取第一个返回结果并显示该结果。  为了解决这个问题，我们需要第一个查询不产生任何结果。   这可以简单地通过将文章 ID 从 1 更改为 0 来完成。 </p>
+<pre><code>0 UNION SELECT 1,2,3
+</code></pre>
+<p>您现在将看到文章仅由返回列值 1、2 和 3 的 UNION 选择的结果组成。我们可以开始使用这些返回值来检索更有用的信息。  首先，我们将获得我们有权访问的数据库名称： </p>
+<pre><code>0 UNION SELECT 1,2,database()
+</code></pre>
+<p>您现在会看到之前显示数字 3 的位置； 它现在显示数据库的名称，即 <strong>sqli_one</strong> 。 </p>
+<p>我们的下一个查询将收集该数据库中的表列表。 </p>
+<pre><code>0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = &#39;sqli_one&#39;
+</code></pre>
+<p>在此查询中有一些新东西需要学习。 首先， <strong>group_concat()</strong> 从多个返回的行中获取指定的列（在我们的例子中是 table_name），并将其放入一个以逗号分隔的字符串中。 接下来是 <strong>information_schema</strong> 数据库； 数据库的每个用户都可以访问它，它包含有关用户有权访问的所有数据库和表的信息。 在这个特定的查询中，我们有兴趣列出 <strong>sqli_one</strong> 数据库中的所有表，即 article 和 staff_users。 </p>
+<p>由于第一级旨在发现 Martin 的密码，因此我们对 staff_users 表感兴趣。  我们可以再次利用 information_schema 数据库，使用以下查询找到该表的结构。 </p>
+<pre><code>0 UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name = &#39;staff_users&#39;
+</code></pre>
+<p>这类似于前面的 SQL 查询。 但是，我们要检索的信息已从 table_name 更改为 <strong>column_name</strong> ，我们在 information_schema 数据库中查询的表已从 tables 更改为 <strong>columns</strong> ，并且我们正在搜索 <strong>table_name</strong> 列的值为 <strong>staff_users</strong> 。 </p>
+<p>查询结果为 staff_users 表提供了三列：id、password 和 username。  我们可以使用以下查询的用户名和密码列来检索用户信息。 </p>
+<pre><code>0 UNION SELECT 1,2,group_concat(username,&#39;:&#39;,password SEPARATOR &#39; &#39;) FROM staff_users
+</code></pre>
+<p>我们再次使用 group_concat 方法将所有行返回到一个字符串中并使其更易于阅读。 我们还添加了 <strong>,’:’</strong> 来将用户名和密码彼此分开。 我们没有用逗号分隔，而是选择了 HTML ** ** 标记，它强制每个结果位于单独的一行上，以便于阅读。 </p>
+<h3 id="盲-SQLi-身份验证绕过"><a href="#盲-SQLi-身份验证绕过" class="headerlink" title="盲 SQLi - 身份验证绕过"></a>盲 SQLi - 身份验证绕过</h3><p>**盲SQLi<br>**</p>
+<p>与 In-Band SQL 注入不同，我们可以直接在屏幕上看到我们的攻击结果，盲 SQLi  是当我们几乎没有或没有反馈来确认我们注入的查询是否成功时，这是因为错误消息已被禁用，但无论如何注入仍然有效。   您可能会感到惊讶，我们所需要的只是成功枚举整个数据库的一点点反馈。 </p>
+<p><strong>身份验证绕过</strong> </p>
+<p>一  最直接的盲注 SQL 注入技术是什么时候  绕过登录表单等身份验证方法。  在这种情况下，  我们对从数据库中检索数据不感兴趣；  我们刚刚  想通过登录。 </p>
+<p>登录   连接到用户数据库的表单通常是在   Web 应用程序对内容不感兴趣的方式   用户名和密码，但更多的是两者是否配对   在用户表中。 简而言之，Web 应用程序询问   数据库“你有用户名 <strong>bob</strong> 和密码 <strong>bob123</strong> 吗？”,   并且数据库回复是或否（真/假），并且，   根据该答案，决定 Web 应用程序是否允许您   进行与否。 </p>
+<p>服用  考虑到以上信息，不必一一列举  有效的用户名/密码对。  我们只需要创建一个数据库查询  回答是/真的。 </p>
+<p><strong>实际的：</strong> </p>
+<p>等级  两个 SQL 注入示例显示了这个确切的示例。  我们可以看到  在标有“SQL查询”的框中，对数据库的查询是  下列的： </p>
+<pre><code>select * from users where username=&#39;%username%&#39; and password=&#39;%password%&#39; LIMIT 1;
+</code></pre>
+<p>注意 <strong>%username%</strong> 和 <strong>%password%</strong> 值取自登录表单字段，SQL 查询框中的初始值将为空，因为这些字段当前为空。 </p>
+<p>为了使它成为一个始终返回 true 的查询，我们可以在密码字段中输入以下内容： </p>
+<pre><code>&#39; OR 1=1;--
+</code></pre>
+<p>它将 SQL 查询变成以下内容： </p>
+<pre><code>select * from users where username=&#39;&#39; and password=&#39;&#39; OR 1=1;
+</code></pre>
+<p>因为 1=1 是真语句而且我们使用了 <strong>OR</strong> 运算符，   这将始终导致查询返回 true，满足   数据库找到有效的 Web 应用程序逻辑   用户名/密码组合，并且应该允许访问。 </p>
+<h3 id="盲-SQLi-基于布尔"><a href="#盲-SQLi-基于布尔" class="headerlink" title="盲 SQLi - 基于布尔"></a>盲 SQLi - 基于布尔</h3><p><strong>基于布尔</strong> </p>
+<p>布尔值  基于 SQL 注入是指我们从我们的服务器收到的响应  可能是真/假、是/否、开/关、1/0 或  任何只能有两种结果的反应。  那结果  向我们确认我们的 SQL 注入负载成功或  不是。  在第一次检查时，您可能会觉得这种反应有限  无法提供太多信息。  仍然，事实上，只有这两个  响应，可以枚举整个数据库结构和  内容。 </p>
+<p><strong>实际的：</strong> </p>
+<p>在 SQL 注入示例机的第三层，您将看到一个具有以下 URL 的模拟浏览器： </p>
+<p><strong><a target="_blank" rel="noopener" href="https://website.thm/checkuser?username=admin">https://website.thm/checkuser?username=admin</a></strong> </p>
+<p>浏览器主体包含 <strong>{“taken”:true}</strong> 。   此 API 端点复制了在许多注册中发现的常见功能   表单，检查用户名是否已经注册到   提示用户选择不同的用户名。 因为 <strong>，</strong> 取值设置 <strong>true</strong> 为   我们可以假设用户名 admin 已经注册。 事实上，我们可以   通过更改模拟浏览器地址栏中的用户名来确认这一点   从 <strong>admin</strong> 到 <strong>admin123</strong> ，然后按回车键，您会看到所 <strong>取</strong> 现在已更改为 <strong>false</strong> 。 </p>
+<p>处理的 SQL 查询如下所示： </p>
+<pre><code>select * from users where username = &#39;%username%&#39; LIMIT 1;
+</code></pre>
+<p>作为   我们可以控制的唯一输入是查询中的用户名   字符串，我们必须使用它来执行我们的 SQL 注入。 保持   用户名为 <strong>admin123</strong> ，我们   可以开始附加到此以尝试使数据库确认为真   things，这会将所取字段的状态从 false 更改为   真的。 </p>
+<p>喜欢  在之前的关卡中，我们的首要任务是确定  users 表中的列，我们可以使用 UNION 来实现  陈述。  将用户名值更改为以下内容： </p>
+<pre><code>admin123&#39; UNION SELECT 1;-- 
+</code></pre>
+<p>由于 Web 应用程序已将值作为 false 进行响应，因此 <strong>我们</strong> 可以确认这是不正确的列值。 继续添加更多列，直到我们 <strong>获得</strong> 值 <strong>true</strong> 。 您可以通过将用户名设置为以下值来确认答案是三列： </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3;-- 
+</code></pre>
+<p>现在我们的列数已经确定，我们可以处理   数据库的枚举。 我们的首要任务是发现数据库   姓名。 为此，我们可以使用内置的 <strong>database()</strong> 方法，然后使用 <strong>like</strong> 运算符尝试查找将返回真实状态的结果。 </p>
+<p>试试下面的用户名值，看看会发生什么： </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 where database() like &#39;%&#39;;--
+</code></pre>
+<p>我们得到一个真实的响应，因为在 like 运算符中，我们只有 <strong>%</strong> ，它将匹配任何东西，因为它是通配符值。 如果我们将通配符更改为 <strong>a%</strong> ，您会看到响应返回到 false，这确认数据库名称不以字母 <strong>a</strong> 。   我们可以循环遍历所有字母、数字和字符，例如 -   和 _ 直到我们发现一个匹配项。 如果您将以下内容作为用户名发送   值，您将收到一个 <strong>真实</strong> 响应，确认数据库名称以字母 <strong>s</strong> 。 </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 where database() like &#39;s%&#39;;--
+</code></pre>
+<p>现在你移动到数据库名称的下一个字符，直到找到另一个 <strong>真实的</strong> 响应，   例如，’sa%’、’sb%’、’sc%’ 等。继续此过程直到   您会发现数据库名称的所有字符，即 <strong>sqli_three</strong> 。 </p>
+<p>我们已经  建立了数据库名称，我们现在可以使用它来枚举表  通过使用 information_schema 使用类似的方法命名  数据库。  尝试将用户名设置为以下值： </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = &#39;sqli_three&#39; and table_name like &#39;a%&#39;;--
+</code></pre>
+<p>此查询 <strong>information_schema</strong> 数据库中的 <strong>tables</strong> 在数据库名称与 <strong>sqli_three</strong> 且表名称以字母 a 开头 由于上述查询导致 <strong>错误</strong> 响应，   我们可以确认 sqli_three 数据库中没有表   以字母a开头。 像以前一样，你需要循环   字母、数字和字符，直到找到肯定的匹配项。 </p>
+<p>你会  最终在名为 sqli_three 的数据库中发现了一个表  用户，您可以通过运行以下用户名来确认  有效负载： </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = &#39;sqli_three&#39; and table_name=&#39;users&#39;;--
+</code></pre>
+<p>最后，我们现在需要枚举 <strong>用户</strong> 表   这样我们就可以正确地在其中搜索登录凭据。 再次使用   information_schema 数据库和我们已经获得的信息，我们   可以开始查询它的列名。 使用下面的有效载荷，我们   查找 <strong>。</strong> 数据库等于sqli_three，表名为users，列名以字母a开头的列表 </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE  TABLE_SCHEMA=&#39;sqli_three&#39; and TABLE_NAME=&#39;users&#39; and COLUMN_NAME like  &#39;a%&#39;;
+</code></pre>
+<p>再次   你需要循环字母、数字和字符，直到你   找到匹配。 当您正在寻找多个结果时，您必须添加   每次找到新的列名时，这都会添加到您的有效负载中，因此您不必   不断发现同一个。 例如，一旦您找到   名为 <strong>id</strong> ，您会将其附加到原始有效负载（如下所示）。 </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE  TABLE_SCHEMA=&#39;sqli_three&#39; and TABLE_NAME=&#39;users&#39; and COLUMN_NAME like  &#39;a%&#39; and COLUMN_NAME !=&#39;id&#39;;
+</code></pre>
+<p>重复   此过程三次将使您能够发现列 id，   用户名和密码。 现在您可以使用它来查询 <strong>用户</strong> 表以获取登录凭据。 首先，您需要发现一个有效的用户名，您可以使用下面的有效负载： </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 from users where username like &#39;a%
+</code></pre>
+<p>其中，一旦您循环了所有字符，您将确认用户名 <strong>admin</strong> 。   现在你有了用户名。 您可以专注于发现   密码。 下面的有效载荷向您展示了如何找到密码： </p>
+<pre><code>admin123&#39; UNION SELECT 1,2,3 from users where username=&#39;admin&#39; and password like &#39;a%
+</code></pre>
+<p>循环遍历所有字符，您会发现密码是 3845。 </p>
+<p>你  现在可以使用您通过  登录表单上的盲SQL注入漏洞访问下一个  等级。 </p>
+<p>SQL没完，但是先得搞网络防御了</p>
+<h1 id="网络防御"><a href="#网络防御" class="headerlink" title="网络防御"></a>网络防御</h1><p>网络防御路径旨在广泛介绍检测和响应威胁所需的不同领域。  这条道路将关注以下领域： </p>
+<ul>
+<li>入门 </li>
+<li>威胁和漏洞管理 </li>
+<li>安全运营和监控 </li>
+<li>威胁仿真 </li>
+<li>事件响应与取证 </li>
+<li>恶意软件分析和逆向工程 </li>
+</ul>
+<h3 id="OSI-模型：概述"><a href="#OSI-模型：概述" class="headerlink" title="OSI 模型：概述"></a>OSI 模型：概述</h3><p>第 7 层 - 应用程序 ： </p>
+<p>OSI 模型的应用层本质上为计算机上运行的程序提供网络选项。  它几乎只与应用程序一起工作，为它们提供一个接口来传输数据。  当数据被提供给应用层时，它被传递到表示层。 </p>
+<p>第 6 层 - 介绍 ： </p>
+<p>表示层从应用层接收数据。 此数据往往采用应用程序可以理解的格式，但不一定采用 <em>接收</em> 计算机中的应用程序层可以理解的标准化格式。 表示层将数据转换为标准化格式，并处理对数据的任何加密、压缩或其他转换。 完成后，数据将向下传递到会话层。 </p>
+<p>第 5 层 - 会话 ： </p>
+<p>当会话层从表示层接收到格式正确的数据时，它会查看是否可以通过网络与另一台计算机建立连接。 如果不能，则它会发回一个错误，并且该过程不会继续进行。 如果 <em>可以</em> 建立会话，那么会话层的工作就是维护它，并与远程计算机的会话层合作以同步通信。 会话层特别重要，因为它创建的会话对于所讨论的通信是唯一的。 这就是允许您同时向不同端点发出多个请求而不会混淆所有数据的原因（考虑同时在 Web 浏览器中打开两个选项卡）！ 当会话层成功记录主机和远程计算机之间的连接时，数据将向下传递到第 4 层：传输层。 </p>
+<p>第 4 层 - 传输 ： </p>
+<p>传输层是一个非常有趣的层，它提供许多重要的功能。 它的第一个目的是选择传输数据的协议。 传输层最常见的两种协议是 TCP （ <strong>P</strong> rotocol <strong>D</strong> atagram <strong>P</strong> ）和 UDP （ <strong>U</strong> ser <strong>rotocol</strong> Control <strong>Transmission</strong> ）； 使用 TCP ，传输是 <em>基于连接的</em> ，这意味着在请求期间建立并维护计算机之间的连接。 这允许可靠的传输，因为连接可用于确保数据包 <em>全部</em> 到达正确的位置。 连接 TCP 允许两台计算机保持持续通信，以确保以可接受的速度发送数据，并重新发送任何丢失的数据。 对于 UDP，情况正好相反。 数据包基本上被扔到接收计算机上——如果它不能跟上，那就是 <em>它的</em> 问题（这就是为什么如果连接不好，通过类似 Skype 的视频传输可能会像素化）。 这意味着 TCP 通常用于精度高于速度的情况（例如文件传输或加载网页），而 UDP 用于速度更重要的情况（例如视频流）。 </p>
+<p>选择协议后，传输层将传输分成小块（在 TCP 上称为 <em>段</em> ，在 UDP 上称为 <em>数据报</em> ），这使得成功传输消息变得更加容易。 </p>
+<p>第 3 层——网络： </p>
+<p>网络层负责定位您的请求的目的地。 例如，互联网是一个巨大的网络； 当你想从网页请求信息时，网络层会获取页面的 IP 地址并找出最佳路径。 在这个阶段，我们正在使用仍然由软件控制的所谓 <em>逻辑</em> 寻址（即 IP 地址）。 逻辑地址用于为网络提供秩序，对它们进行分类并允许我们对它们进行适当的排序。 目前最常见的逻辑寻址形式是 IPV4 格式，您可能已经熟悉它（即 192.168.1.1 是家庭路由器的常用地址）。 </p>
+<p>第 2 层——数据链路： </p>
+<p>数据链路层侧重于传输的 <em>物理</em> 寻址。 它从网络层接收数据包（包括远程计算机的 IP 地址）并添加接收端点的物理 ( MAC ) 地址。 每台 网络的计算机内部都有一个网络 <strong>NIC</strong> 卡 <strong>，</strong> 接口 <strong>启用</strong> 带有一个唯一的 媒体 访问 <strong>控制</strong> （ <strong>MAC</strong> ） <strong>它</strong> 地址来识别它。 </p>
+<p>MAC 地址由制造商设置并直接烧入卡中； 它们无法更改——尽管它们 <em>可以</em> 被欺骗。 当通过网络发送信息时，实际上是物理地址用于确定将信息发送到哪里。 </p>
+<p>此外，以适合传输的格式呈现数据也是数据链路层的工作。 </p>
+<p>数据链路层在接收数据时也起着重要的作用，因为它会检查接收到的信息以确保它在传输过程中没有被破坏，这很可能发生在数据由第 1 层传输时：物理层。 </p>
+<p>第 1 层——物理： </p>
+<p>物理层一直到计算机的硬件。  这是通过网络发送和接收构成数据传输的电脉冲的地方。  物理层的工作是将传输的二进制数据转换为信号并通过网络传输，以及接收传入信号并将其转换回二进制数据。 </p>
+<hr>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p> 随着数据向下传递到模型的每一层，包含特定于相关层的详细信息的更多信息将添加到传输的开始。 例如，网络层添加的标头将包括源和目标 IP 地址之类的内容，而传输层添加的标头将包括（除其他外）特定于所使用协议的信息。 了一块on， <em>结束</em> 用于验证数据在传输时没有被破坏； 这还有增加安全性的额外好处，因为如果不破坏预告片就无法拦截和篡改数据。 这整个过程称为 <em>封装；</em> 数据可以从一台计算机发送到另一台计算机的过程。 </p>
+<p>请注意，封装的数据在流程的不同步骤中被赋予了不同的名称。 在第 7,6 和 5 层中，数据简称为数据。 在传输层中，封装的数据被称为段或数据报（取决于是否 TCP 或 UDP 作为传输协议）。 在网络层，数据被称为数据包。 当数据包向下传递到数据链路层时，它就变成了一个帧，而当它通过网络传输时，该帧已经被分解成比特。 </p>
+<p>当第二台计算机接收到消息时，它会反转这个过程——从物理层开始，一直向上直到它到达应用层，并在传递过程中剥离添加的信息。 这称为 <em>解封装。</em> 因此，您可以将 OSI 模型的层视为存在于每台具有网络功能的计算机中。 虽然实际上并没有那么明确，但计算机都遵循相同的封装过程来发送数据并在接收到数据时解封装。 </p>
+<p>封装和解封装过程非常重要——不仅因为它们的实际用途，还因为它们为我们提供了发送数据的标准化方法。  这意味着所有传输将始终遵循相同的方法，允许任何启用网络的设备向任何其他可访问的设备发送请求并确保它会被理解——无论它们是否来自同一制造商；  使用相同的操作系统；  或任何其他因素。 </p>
+<h3 id="TCP-IP-模型（未完成）"><a href="#TCP-IP-模型（未完成）" class="headerlink" title="TCP/IP 模型（未完成）"></a>TCP/IP 模型（未完成）</h3><p>TCP/IP 模型在许多方面与 OSI 模型非常相似。 它比以前早几年了，是现实世界网络的基础。 TCP/IP 模型由四层组成：应用层、传输层、互联网层和网络接口层。 在它们之间，它们涵盖了与 OSI 模型的七层相同的功能范围</p>
+<h3 id="网络工具-Ping"><a href="#网络工具-Ping" class="headerlink" title="网络工具 Ping"></a>网络工具 Ping</h3><p>ping 的基本语法是 <code>ping </code>.  在此示例中，我们使用 ping 来测试是否可以连接到 Google：  </p>
+<h3 id="Traceroute"><a href="#Traceroute" class="headerlink" title="Traceroute"></a>Traceroute</h3><p>ping 命令的逻辑后续是“traceroute”。  Traceroute 可用于映射您的请求在前往目标机器时所采用的路径。 traceroute 允许您查看这些连接中的每一个——它允许您查看您的计算机和您请求的资源之间的每个中间步骤。 上 traceroute 的基本语法 Linux 是这样的：   <code>traceroute </code>  destination</p>
+<h3 id="WHOIS"><a href="#WHOIS" class="headerlink" title="WHOIS"></a>WHOIS</h3><p> Whois 查询非常容易执行。  只需使用 <code>whois </code>  destination获取有关域注册的可用信息列表 </p>
+<h3 id="DIG"><a href="#DIG" class="headerlink" title="DIG"></a>DIG</h3><p> <code>dig</code>. 与 ping 和 traceroute 一样，dig 应该在 Linux 系统上自动安装。 </p>
+<p>Dig 允许我们手动查询我们选择的递归 DNS 服务器以获取有关域的信息：<br> dig  domain  @dns-server-ip</p>
+<h1 id="事件响应和取证"><a href="#事件响应和取证" class="headerlink" title="事件响应和取证"></a>事件响应和取证</h1><h3 id="Investigating-Windows"><a href="#Investigating-Windows" class="headerlink" title="Investigating Windows"></a>Investigating Windows</h3><h3 id="Windows取证1"><a href="#Windows取证1" class="headerlink" title="Windows取证1"></a>Windows取证1</h3><h3 id="Windows-注册表和取证"><a href="#Windows-注册表和取证" class="headerlink" title="Windows 注册表和取证"></a>Windows 注册表和取证</h3><p>Windows 注册表由键和值组成。 当您打开 regedit.exe 实用程序查看注册表时，您看到的文件夹是注册表项。 注册表值是存储在这些注册表项中的数据。 一 [Registry Hive ](<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives#:~:text=Registry">https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives#:~:text=Registry</a> Hives. A hive is a logical group,with a separate file for the user profile.)组存储在磁盘上单个文件中的键、子键和值。 </p>
+<p><strong>注册表的结构：</strong> </p>
+<p>任何 Windows 系统上的注册表都包含以下五个根键： </p>
+<ol>
+<li><p>HKEY_CURRENT_USER </p>
+</li>
+<li><p>HKEY_HKEY_USERS </p>
+</li>
+<li><p>HKEY_LOCAL_MACHINE </p>
+</li>
+<li><p>HKEY_CLASSES_ROOT </p>
+</li>
+<li><p>HKEY_CURRENT_CONFIG </p>
+<p>win + R 输入regedit.exe打开注册表编辑器</p>
+<table>
+<thead>
+<tr>
+<th>文件夹/预定义键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>HKEY_CURRENT_USER</strong></td>
+<td>包含用户的配置信息的根                 当前登录。  用户的文件夹、屏幕颜色和控制面板设置都存储在这里。                 此信息与用户的个人资料相关联。  该键有时缩写为                 香港中文大学。</td>
+</tr>
+<tr>
+<td><strong>HKEY_USERS</strong></td>
+<td>包含计算机上所有主动加载的用户配置文件。                 HKEY_CURRENT_USER 是 HKEY_USERS 的子项。  HKEY_USERS 有时缩写为 HKU。</td>
+</tr>
+<tr>
+<td><strong>HKEY_LOCAL_MACHINE</strong></td>
+<td>包含特定于计算机的配置信息（对于任何                 用户）。  此密钥有时缩写为 HKLM。</td>
+</tr>
+<tr>
+<td><strong>HKEY_CLASSES_ROOT</strong></td>
+<td>是的子键 <code>HKEY_LOCAL_MACHINE\Software</code>.  该信息                 存储在此处可确保在您使用 Windows 打开文件时打开正确的程序                 探索者。  此密钥有时缩写为 HKCR。 从 Windows 2000 开始，此信息是                 存储在 HKEY_LOCAL_MACHINE 和 HKEY_CURRENT_USER 键下。  这                 <code>HKEY_LOCAL_MACHINE\Software\Classes</code>键包含可以应用于所有的默认设置                  本地计算机上的用户。 这 <code>HKEY_CURRENT_USER\Software\Classes</code>键有设置                 覆盖默认设置并仅适用于交互式用户。 HKEY_CLASSES_ROOT 键                 提供合并来自这两个来源的信息的注册表视图。                 HKEY_CLASSES_ROOT 还为为早期版本设计的程序提供此合并视图                 窗户。  要更改交互式用户的设置，必须在                 <code>HKEY_CURRENT_USER\Software\Classes</code>而不是在 HKEY_CLASSES_ROOT 下。 改变                 默认设置，更改必须在 <code>HKEY_LOCAL_MACHINE\Software\Classes</code>。如果你                 write keys到HKEY_CLASSES_ROOT下的一个key，系统将信息存放在                 <code>HKEY_LOCAL_MACHINE\Software\Classes</code>. 如果您将值写入下面的键                 HKEY_CLASSES_ROOT，且key已经存在于 <code>HKEY_CURRENT_USER\Software\Classes</code>,                 系统会将信息存储在那里而不是在下面                 <code>HKEY_LOCAL_MACHINE\Software\Classes</code>.</td>
+</tr>
+<tr>
+<td><strong>HKEY_CURRENT_CONFIG</strong></td>
+<td>包含有关本地使用的硬件配置文件的信息                 计算机在系统启动时。</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="离线访问注册表配置单元"><a href="#离线访问注册表配置单元" class="headerlink" title="离线访问注册表配置单元"></a>离线访问注册表配置单元</h3><p>如果您正在访问实时系统，您将能够使用 regedit.exe 访问注册表，并且您将看到我们在上一个任务中了解到的所有标准根密钥。  但是，如果您只能访问磁盘映像，则必须知道注册表配置单元在磁盘上的位置。  大多数这些蜂巢位于 <code>C:\Windows\System32\Config</code>目录是： </p>
+<ol>
+<li><strong>默认</strong> （安装在 <code>HKEY_USERS\DEFAULT</code>) </li>
+<li><strong>SAM</strong> （安装在 <code>HKEY_LOCAL_MACHINE\SAM</code>) </li>
+<li><strong>安全</strong> （安装在 <code>HKEY_LOCAL_MACHINE\Security</code>) </li>
+<li><strong>软件</strong> （安装在 <code>HKEY_LOCAL_MACHINE\Software</code>) </li>
+<li><strong>SYSTEM</strong> （安装在 <code>HKEY_LOCAL_MACHINE\System</code>) </li>
+</ol>
+<p><strong>包含用户信息的配置单元：</strong> </p>
+<p>除了这些配置单元之外，还可以在用户配置文件目录中找到另外两个包含用户信息的配置单元。  对于 Windows 7 及更高版本，用户的配置文件目录位于 <code>C:\Users\username\</code> where the hives are:  </p>
+<ol>
+<li><strong>NTUSER.DAT</strong> （当用户登录时安装在 HKEY_CURRENT_USER 上） </li>
+<li><strong>USRCLASS.DAT</strong> （挂载在HKEY_CURRENT_USER\Software\CLASSES） </li>
+</ol>
+<p>USRCLASS.DAT 配置单元位于目录中 <code>C:\Users\username\AppData\Local\Microsoft\Windows</code></p>
+<p>NTUSER.DAT 配置单元位于目录中 <code>C:\Users\username\</code>. </p>
+<p>请记住 NTUSER.DAT 和 USRCLASS.DAT 是隐藏文件。</p>
+<p><strong>Amcache 蜂巢：</strong> </p>
+<p>除了这些文件之外，还有另一个非常重要的配置单元，称为 AmCache 配置单元。  这个蜂巢位于 <code>C:\Windows\AppCompat\Programs\Amcache.hve</code>.  Windows 创建此配置单元以保存有关最近在系统上运行的程序的信息。 </p>
+<p><strong>事务日志和备份：</strong> </p>
+<p>其他一些非常重要的取证数据来源是注册表事务日志和备份。   事务日志可以被视为注册表配置单元的更改日志的日志。  Windows 在将数据写入注册表配置单元时经常使用事务日志。   这意味着事务日志通常可以在注册表中包含最新的更改，这些更改本身还没有进入注册表配置单元。  每个配置单元的事务日志作为 .LOG  文件存储在与配置单元本身相同的目录中。  它与注册表配置单元同名，但扩展名为 .LOG。  例如，SAM 配置单元的事务日志将位于 <code>C:\Windows\System32\Config</code>在文件名 SAM.LOG 中。  有时也可以有多个事务日志。  在这种情况下，他们将拥有 .LOG1、.LOG2 等作为其扩展名。  谨慎的做法是在执行注册表取证时也查看事务日志。 </p>
+<p>注册表备份与事务日志相反。  这些是位于 <code>C:\Windows\System32\Config</code>目录。  这些配置单元被复制到 <code>C:\Windows\System32\Config\RegBack</code>目录每十天一次。  如果您怀疑某些注册表项最近可能已被删除/修改，那么它可能是一个很好的查看位置。 </p>
+<h3 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h3><p>在进行取证时，我们要么会遇到实时系统，要么会遇到系统的图像。  为了准确起见，建议对系统进行映像或制作所需数据的副本并对其进行取证。  这个过程称为数据采集。  下面我们讨论从活动系统或磁盘映像获取注册表数据的不同方法： </p>
+<p>虽然我们可以通过注册表编辑器查看注册表，但取证上正确的方法是获取此数据的副本并对其进行分析。  但是，当我们去复制注册表配置单元时 <code>%WINDIR%\System32\Config</code>，我们不能，因为它是一个受限文件。  那么，现在该怎么办？ </p>
+<p>要获取这些文件，我们可以使用以下工具之一： </p>
+<p> <strong>KAPE</strong> </p>
+<p> <strong>Autopsy</strong></p>
+<p> <strong>FTK Imager</strong> </p>
+<h3 id="探索-Windows-注册表"><a href="#探索-Windows-注册表" class="headerlink" title="探索 Windows 注册表"></a>探索 Windows 注册表</h3><p> 一旦我们提取了注册表配置单元，我们就需要一个工具来像在注册表编辑器中一样查看这些文件。  由于注册表编辑器仅适用于实时系统，无法加载导出的配置单元，因此我们可以使用以下工具：  </p>
+<p> <strong>Registry Viewer</strong> 查看类似NTUSER.DAT，SAM没法直接查看的</p>
+<p> <strong>Zimmerman’s Registry Explorer</strong> 必须先安装.NET6.0！！！！读取注册表时必须也要注册表相应的.LOG</p>
+<p> <strong>RegRipper</strong> 可生成文档结果</p>
+<p>如果查看原始的SOFTWARE,就用win+r 输入regedit.exe</p>
+<h3 id="系统信息和系统帐户"><a href="#系统信息和系统帐户" class="headerlink" title="系统信息和系统帐户"></a>系统信息和系统帐户</h3><p>现在我们已经了解了如何读取注册表数据，让我们找出在注册表中的何处查找以执行取证分析。 </p>
+<p>当我们开始进行取证分析时，第一步是找出系统信息。  此任务将涵盖收集与计算机的系统和帐户信息相关的信息。 </p>
+<p><strong>操作系统版本：</strong> </p>
+<p>如果我们只有分类数据来执行取证，我们可以确定通过注册表提取此数据的操作系统版本。  要查找操作系统版本，我们可以使用以下注册表项： </p>
+<pre><code>SOFTWARE\Microsoft\Windows NT\CurrentVersion
+</code></pre>
+<p>这就是注册表资源管理器显示此注册表项的方式。  看一看并回答问题#1</p>
+<p><img src="/2022/10/15/tryhackme/image-20221201162618142.png" alt="image-20221201162618142"></p>
+<p> <strong>Current control set</strong> </p>
+<p>包含用于控制系统启动的机器配置数据的配置单元称为控制集。   通常，我们会在一台机器的 SYSTEM 配置单元中看到两个 Control Set，ControlSet001 和 ControlSet002。  在大多数情况下，ControlSet001 将指向机器启动时使用的控制集，而 ControlSet002 将是 <code>last known good</code>配置。  他们的位置将是： </p>
+<pre><code>SYSTEM\ControlSet001
+SYSTEM\ControlSet002
+</code></pre>
+<p>Windows 在机器运行时创建一个可变的控制集，称为 CurrentControlSet ( <code>HKLM\SYSTEM\CurrentControlSet</code>).  为了获得最准确的系统信息，这是我们将参考的配置单元。  通过查看以下注册表值，我们可以找出哪个控件集被用作 CurrentControlSet： </p>
+<pre><code>SYSTEM\Select\Current
+</code></pre>
+<p>同样， <code>last known good</code>可以使用以下注册表值找到配置： </p>
+<pre><code>SYSTEM\Select\LastKnownGood
+</code></pre>
+<p>这就是它在注册表资源管理器中的样子。  看一看并回答问题 #2。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221201163231077.png" alt="image-20221201163231077"></p>
+<p>在继续进行分析之前建立此信息至关重要。  正如我们将看到的，我们收集的许多取证工件将从控制集中收集。 </p>
+<p><strong>计算机名称：</strong> </p>
+<p>在执行取证分析时建立计算机名称至关重要，以确保我们在我们应该工作的机器上工作。  我们可以从以下位置找到计算机名称： </p>
+<pre><code>SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName
+</code></pre>
+<p>Registry Explorer 显示如下。  看一看并回答问题#3： </p>
+<p><img src="/2022/10/15/tryhackme/image-20221201163849379.png" alt="image-20221201163849379"></p>
+<p><strong>时区信息：</strong> </p>
+<p>为了准确起见，确定计算机所在的时区非常重要。这将有助于我们了解事件发生的时间顺序。  要查找时区信息，我们可以查看以下位置： </p>
+<pre><code>SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+</code></pre>
+<p>这是它在注册表资源管理器中的外观。  看一看并回答问题#4。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221201163934603.png" alt="image-20221201163934603"></p>
+<p><strong>网络接口和过去的网络：</strong> </p>
+<p>以下注册表项将提供我们正在调查的机器上的网络接口列表： </p>
+<pre><code>SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces
+</code></pre>
+<p>查看注册表资源管理器中显示的此注册表项并回答问题 # 5。 <img src="/2022/10/15/tryhackme/image-20221201164142523.png" alt="image-20221201164142523"></p>
+<p>每个接口都用一个唯一标识符 (GUID)  子项表示，其中包含与接口的 TCP/IP 配置相关的值。  该密钥将为我们提供 IP 地址、DHCP IP 地址和子网掩码、DNS  服务器等信息。  此信息很重要，因为它可以帮助您确保您在应该执行取证的机器上执行取证。 </p>
+<p>可以在以下位置找到给定机器连接到的过去网络： </p>
+<pre><code>SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged
+SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Managed
+</code></pre>
+<p><img src="/2022/10/15/tryhackme/image-20221201164426555.png" alt="image-20221201164426555"></p>
+<p>这些注册表项包含过去的网络以及它们上次连接的时间。  注册表项的最后写入时间指向这些网络的最后一次连接时间。 </p>
+<p><strong>自动启动程序（自动运行）：</strong> </p>
+<p>以下注册表项包含有关用户登录时运行的程序或命令的信息。 </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce
+SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce
+SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run
+SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+</code></pre>
+<p><img src="/2022/10/15/tryhackme/image-20221201165542643.png" alt="image-20221201165542643"></p>
+<p><img src="/2022/10/15/tryhackme/image-20221201165551198.png" alt="image-20221201165551198"></p>
+<p>以下注册表项包含有关服务的信息： </p>
+<pre><code>SYSTEM\CurrentControlSet\Services
+</code></pre>
+<p>请注意下面屏幕截图中 Start 键的值。 <img src="/2022/10/15/tryhackme/image-20221201165818763.png" alt="image-20221201165818763"></p>
+<p> 在此注册表项中，如果 <code>start</code> 密钥设置为 0x02，这意味着该服务将在引导时启动。  </p>
+<p><strong>SAM hive 和用户信息：</strong> </p>
+<p>SAM 配置单元包含用户帐户信息、登录信息和组信息。  这些信息主要位于以下位置： </p>
+<pre><code>SAM\Domains\Account\Users
+</code></pre>
+<p>看看下面的截图并回答问题 #6。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221201170714210.png" alt="image-20221201170714210"></p>
+<p> 此处包含的信息包括用户的相对标识符（RID）、用户登录次数、上次登录时间、上次登录失败、上次密码更改、密码过期、密码策略和密码提示，以及用户所在的任何组是的一部分。 </p>
+<h3 id="文件-文件夹的使用或知识"><a href="#文件-文件夹的使用或知识" class="headerlink" title="文件/文件夹的使用或知识"></a>文件/文件夹的使用或知识</h3><h2 id="最近的文件："><a href="#最近的文件：" class="headerlink" title="最近的文件："></a><strong>最近的文件：</strong></h2><p>Windows 为每个用户维护一个最近打开的文件列表。 正如我们在使用 Windows 资源管理器时可能看到的那样，它向我们显示了最近使用的文件列表。 此信息存储在 NTUSER 配置单元中，可在以下位置找到 ： </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
+</code></pre>
+<p>Registry Explorer  允许我们快速对注册表项中包含的数据进行排序。  例如，最近的文档选项卡将最近使用的 (MRU) 文件排列在列表的顶部。  Registry  Explorer 还会对它们进行排列，以便最近使用的 (MRU) 文件显示在列表的顶部，而较旧的文件则显示在后面。 </p>
+<p>此注册表项中的另一个有趣的信息是，有不同的文件扩展名的键，例如 <code>.pdf</code>,  <code>.jpg</code>,  <code>.docx</code>等。这些键为我们提供了有关特定文件扩展名的最后使用文件的信息。  因此，如果我们专门查找上次使用的 PDF 文件，我们可以查看以下注册表项： </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.pdf
+</code></pre>
+<p>注册表资源管理器还列出了文件的上次打开时间。  通过查看上面的屏幕截图回答问题 #1。 </p>
+<h2 id="办公室最近的文件："><a href="#办公室最近的文件：" class="headerlink" title="办公室最近的文件："></a><strong>办公室最近的文件：</strong></h2><p>与 Windows 资源管理器维护的 Recent Docs 类似，Microsoft Office 也维护最近打开的文档列表。  此列表也位于 NTUSER 配置单元中。  它可以在以下位置找到： </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Office\VERSION
+</code></pre>
+<p>每个 Microsoft Office 版本的版本号都不同。  示例注册表项如下所示： </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Office\15.0\Word
+</code></pre>
+<p>此处的 15.0 指的是 Office 2013。可以在 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer#office-releases-and-their-version-number">此链接 </a>。 </p>
+<p>从 Office 365 开始，Microsoft 现在将位置与用户的 <a target="_blank" rel="noopener" href="https://www.microsoft.com/security/blog/2008/05/07/what-is-a-windows-live-id/">实时 ID </a>。 在这种情况下，可以在以下位置找到最近的文件。 </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Office\VERSION\UserMRU\LiveID_####\FileMRU
+</code></pre>
+<p>在这种情况下，可以在以下位置找到最近的文件。  此位置还保存了最近使用的文件的完整路径。 </p>
+<h2 id="ShellBags"><a href="#ShellBags" class="headerlink" title="ShellBags:"></a><strong>ShellBags:</strong></h2><p>当任何用户打开文件夹时，它会以特定布局打开。 用户可以根据自己的喜好更改此布局。 对于不同的文件夹，这些布局可能不同。 有关 Windows <em>“外壳”的</em> 已存储，可以识别最近使用的文件和文件夹。 由于此设置对于每个用户都不同，因此它位于用户配置单元中。 我们可以在以下位置找到此信息： </p>
+<pre><code>USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
+USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
+NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
+NTUSER.DAT\Software\Microsoft\Windows\Shell\Bags
+</code></pre>
+<p>Registry Explorer 没有给我们太多关于  ShellBags 的信息。  然而，Eric Zimmerman 的另一个工具 ShellBag Explorer  以一种易于使用的格式向我们展示了信息。  我们只需指向我们提取的配置单元文件，它就会解析数据并向我们显示结果。  一个例子如下所示。   看一看并回答问题 #2。 </p>
+<h2 id="打开-保存和上次访问的对话框-MRU："><a href="#打开-保存和上次访问的对话框-MRU：" class="headerlink" title="打开/保存和上次访问的对话框 MRU："></a><strong>打开/保存和上次访问的对话框 MRU：</strong></h2><p>当我们打开或保存文件时，会出现一个对话框，询问我们从何处保存或打开该文件。  可能会注意到，一旦我们在特定位置打开/保存文件，Windows 就会记住该位置。   这意味着如果我们掌握了这些信息，我们就可以找到最近使用的文件。  我们可以通过检查以下注册表项来做到这一点 </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePIDlMRU
+</code></pre>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU
+</code></pre>
+<p> 这就是注册表资源管理器显示此注册表项的方式。  看看回答问题 3 和 4。 </p>
+<h2 id="Windows-资源管理器地址-搜索栏："><a href="#Windows-资源管理器地址-搜索栏：" class="headerlink" title="Windows 资源管理器地址/搜索栏："></a><strong>Windows 资源管理器地址/搜索栏：</strong></h2><p>识别用户最近活动的另一种方法是分别查看在 Windows 资源管理器地址栏中键入的路径或使用以下注册表项执行的搜索。 </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery
+</code></pre>
+<p>以下是 TypedPaths 键在注册表资源管理器中的样子： </p>
+<p><img src="/2022/10/15/tryhackme/image-20221202181923862.png" alt="image-20221202181923862"></p>
+<h3 id="执行证据"><a href="#执行证据" class="headerlink" title="执行证据"></a>执行证据</h3><p><strong>用户协助</strong> ： </p>
+<p>Windows 在 User Assist 注册表项中跟踪用户使用 Windows 资源管理器启动的应用程序以进行统计。   这些密钥包含有关启动的程序、启动时间和执行次数的信息。  但是，在用户帮助键中找不到使用命令行运行的程序。  用户帮助键存在于 NTUSER  配置单元中，映射到每个用户的 GUID。  我们可以在以下位置找到它： </p>
+<pre><code>NTUSER.DAT\Software\Microsoft\Windows\Currentversion\Explorer\UserAssist\&#123;GUID&#125;\Count
+</code></pre>
+<p>请查看注册表资源管理器中的以下屏幕截图并回答问题 #1。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221202182609209.png" alt="image-20221202182609209"></p>
+<p><strong>垫片缓存：</strong> </p>
+<p>ShimCache 是一种用于跟踪应用程序与操作系统的兼容性并跟踪 在机器上启动的所有应用程序的机制。 它在 Windows 中的主要目的是确保应用程序的向后兼容性。 它也被称为应用程序兼容性缓存（AppCompatCache）。 它位于 SYSTEM 配置单元中的以下位置： </p>
+<pre><code>SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
+</code></pre>
+<p>ShimCache 存储可执行文件的文件名、文件大小和最后修改时间。 </p>
+<p>我们的 goto 工具 Registry Explorer 不会以人类可读的格式解析 ShimCache 数据，因此我们转到另一个名为  AppCompatCache Parser 的工具，它也是 Eric Zimmerman 工具的一部分。  它将 SYSTEM  配置单元作为输入，解析数据，并输出如下所示的 CSV 文件： </p>
+<p><strong>缓存：</strong> </p>
+<p>AmCache hive 是与 ShimCache 相关的神器。  这执行与 ShimCache 类似的功能，并存储与程序执行相关的附加数据。   该数据包括执行路径、安装、执行和删除时间，以及已执行程序的 SHA1 哈希值。  此配置单元位于文件系统中的以下位置： </p>
+<pre><code>C:\Windows\appcompat\Programs\Amcache.hve
+</code></pre>
+<p>有关最后执行的程序的信息可以在配置单元中的以下位置找到： </p>
+<pre><code>Amcache.hve\Root\File\&#123;Volume GUID&#125;\
+</code></pre>
+<p>这是注册表资源管理器解析 AmCache 配置单元的方式： </p>
+<p> <strong>BAM/DAM:</strong> Background Activity Monitor 或  BAM 在后台应用程序的活动上保持一个标签。  类似的桌面活动调节器或 DAM 是 Microsoft Windows  的一部分，可优化设备的功耗。  这两者都是 Microsoft Windows 中现代备用系统的一部分。 </p>
+<p>在 Windows 注册表中，以下位置包含与 BAM 和 DAM 相关的信息。  此位置包含有关上次运行的程序、它们的完整路径和上次执行时间的信息。 </p>
+<pre><code>SYSTEM\CurrentControlSet\Services\bam\UserSettings\&#123;SID&#125;
+SYSTEM\CurrentControlSet\Services\dam\UserSettings\&#123;SID&#125;
+</code></pre>
+<p>下面您可以看到 Registry Explorer 如何解析来自 BAM 的数据： </p>
+<h3 id="外部设备-USB-设备取证"><a href="#外部设备-USB-设备取证" class="headerlink" title="外部设备/USB 设备取证"></a>外部设备/USB 设备取证</h3><p>在机器上执行取证时，通常需要确定是否有任何 USB 或可移动驱动器连接到机器。  如果是这样，与这些设备相关的任何信息对于法医调查员来说都很重要。  在此任务中，我们将通过不同的方式使用注册表查找有关已连接设备和系统驱动器的信息。 </p>
+<p><strong>设备标识：</strong> </p>
+<p>以下位置跟踪插入系统的 USB 密钥。  这些位置存储插入的 USB 设备的供应商 ID、产品 ID 和版本，可用于识别唯一设备。  这些位置还存储设备插入系统的时间。 </p>
+<pre><code>SYSTEM\CurrentControlSet\Enum\USBSTOR
+SYSTEM\CurrentControlSet\Enum\USB
+</code></pre>
+<p>Registry Explorer 以一种友好且易于理解的方式显示此信息。  看看这个并回答问题 1 和 2。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221202185000685.png" alt="image-20221202185000685"></p>
+<p><img src="/2022/10/15/tryhackme/image-20221202185055264.png" alt="image-20221202185055264"></p>
+<p><strong>第一次/最后一次：</strong> </p>
+<p>同样，以下注册表项跟踪设备的第一次连接时间、最后一次连接时间和最后一次从系统中删除设备的时间。 </p>
+<pre><code>SYSTEM\CurrentControlSet\Enum\USBSTOR\Ven_Prod_Version\USBSerial#\Properties\&#123;83da6326-97a6-4088-9453-a19231573b29&#125;\####
+</code></pre>
+<p>在此密钥中，#### 符号可以替换为以下数字以获取所需信息： </p>
+<table>
+<thead>
+<tr>
+<th><strong>价值</strong></th>
+<th><strong>信息</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0064</td>
+<td>首次连接时间</td>
+</tr>
+<tr>
+<td>0066</td>
+<td>最后连接时间</td>
+</tr>
+<tr>
+<td>0067</td>
+<td>最后移除时间</td>
+</tr>
+</tbody></table>
+<p>尽管我们可以手动检查此值，但正如我们在上面看到的那样，Registry Explorer 已经解析了此数据并显示我们是否选择了 USBSTOR 密钥。 </p>
+<p><strong>USB 设备卷名：</strong> </p>
+<p>所连接驱动器的设备名称可在以下位置找到： </p>
+<pre><code>SOFTWARE\Microsoft\Windows Portable Devices\Devices
+</code></pre>
+<p><img src="/2022/10/15/tryhackme/image-20221202185717455.png" alt="image-20221202185717455"></p>
+<p>我们可以比较我们在此注册表项中看到的 GUID，并将其与我们在设备标识中提到的键上看到的磁盘 ID 进行比较，以将名称与唯一设备相关联。  看看这两个屏幕截图并回答问题 #3。 </p>
+<p>结合所有这些信息，我们可以创建一个关于连接到我们正在调查的机器的任何 USB 设备的公平图景。</p>
+<h2 id="Windows取证2"><a href="#Windows取证2" class="headerlink" title="Windows取证2"></a>Windows取证2</h2><h3 id="FAT-文件系统"><a href="#FAT-文件系统" class="headerlink" title="FAT 文件系统"></a>FAT 文件系统</h3><h2 id="文件分配表-FAT-："><a href="#文件分配表-FAT-：" class="headerlink" title="文件分配表 (FAT)："></a><strong>文件分配表 (FAT)：</strong></h2><p>文件分配表 (FAT) 是这些文件系统之一。 至少从 1970 年代后期开始，它一直是 Microsoft  操作系统的默认文件系统，并且仍在使用，尽管不再是默认文件系统。 顾名思义，文件分配表创建一个表，索引分配给不同文件的位的位置。 如果您对 FAT 文件系统的历史感兴趣，可以前往 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/File_Allocation_Table">维基百科页面 </a>了解它。   </p>
+<h2 id="exFAT-文件系统："><a href="#exFAT-文件系统：" class="headerlink" title="exFAT 文件系统："></a><strong>exFAT 文件系统：</strong></h2><p>随着文件大小的增长，尤其是较新的数码相机支持更高分辨率的图像和视频，FAT32 的最大文件大小限制成为相机制造商的一个重要限制因素。  尽管 Microsoft 已转向 NTFS  文件系统，但它不适用于数字媒体设备，因为它们不需要添加的安全功能和随之而来的开销。  因此，这些制造商游说微软创建 exFAT 文件系统。 </p>
+<p>exFAT 文件系统现在是大于 32GB 的 SD 卡的默认文件系统。  它也被大多数数字设备制造商广泛采用。  exFAT 文件系统支持 4KB 到  32MB 的簇大小。  它的最大文件大小和最大卷大小为 128PB（PB）。  它还减少了 FAT 文件系统的一些开销，使其更轻便、更高效。   每个目录最多可以有 2,796,202 个文件。 </p>
+<h3 id="NTFS-文件系统"><a href="#NTFS-文件系统" class="headerlink" title="NTFS 文件系统"></a>NTFS 文件系统</h3><h2 id="NTFS文件系统"><a href="#NTFS文件系统" class="headerlink" title="NTFS文件系统"></a><strong>NTFS文件系统</strong></h2><p>正如在上一个任务中观察到的，FAT  文件系统是一个非常基本的文件系统。  它在组织我们的数据时完成了工作，但它在安全性、可靠性和恢复能力方面提供的更多。   在文件和卷大小方面，它也有一定的限制。  因此，Microsoft 开发了一种称为新技术文件系统 (NTFS) 的更新文件系统来添加这些功能。  该文件系统于 1993 年随 Windows NT 3.1 引入。  但是，它从 Windows XP 开始成为主流。  NTFS  文件系统解决了 FAT 文件系统中存在的许多问题并引入了许多新功能。  我们将在下面讨论一些功能。 </p>
+<h3 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h3><p>NTFS 文件系统保留卷中元数据更改的日志。  此功能有助于系统从碎片整理导致的崩溃或数据移动中恢复。  此日志存储在卷的根目录中的 $LOGFILE 中。  因此 NTFS 文件系统被称为日志文件系统。 </p>
+<h3 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h3><p>FAT 文件系统没有基于用户的访问控制。  NTFS 文件系统具有定义文件/目录所有者和每个用户权限的访问控制。 </p>
+<h3 id="卷影复制"><a href="#卷影复制" class="headerlink" title="卷影复制"></a>卷影复制</h3><p>NTFS 文件系统使用称为卷影副本的功能跟踪对文件所做的更改。  使用此功能，用户可以恢复以前的文件版本以进行恢复或系统恢复。  在最近的勒索软件攻击中，勒索软件攻击者会删除受害者文件系统上的卷影副本，以防止他们恢复数据。 </p>
+<h3 id="备用数据流"><a href="#备用数据流" class="headerlink" title="备用数据流"></a>备用数据流</h3><p>文件是在文件系统中组织的数据流。  备用数据流 (ADS) 是 NTFS 中的一项功能，它允许文件将多个数据流存储在单个文件中。  Internet Explorer 和其他浏览器使用备用数据流来识别从  Internet 下载的文件（使用 ADS 区域标识符）。  还观察到恶意软件将其代码隐藏在 ADS 中。 </p>
+<h2 id="主文件表"><a href="#主文件表" class="headerlink" title="主文件表"></a><strong>主文件表</strong></h2><p>与文件分配表一样，NTFS 中也有一个主文件表。   但是，主文件表或 MFT 比文件分配表要广泛得多。  它是一个结构化数据库，用于跟踪存储在卷中的对象。   因此，我们可以说NTFS文件系统的数据是组织在Master File Table中的。  从取证的角度来看，以下是 MFT 中的一些关键文件： </p>
+<h3 id="MFT"><a href="#MFT" class="headerlink" title="$MFT"></a>$MFT</h3><p>$MFT 是卷中的第一条记录。  Volume Boot Record (VBR) 指向它所在的集群。  $MFT 存储有关卷上存在的所有其他对象所在的集群的信息。  此文件包含卷上存在的所有文件的目录。 </p>
+<h3 id="日志文件"><a href="#日志文件" class="headerlink" title="$日志文件"></a>$日志文件</h3><p>$LOGFILE 存储文件系统的事务日志记录。  它有助于在发生崩溃时保持文件系统的完整性。 </p>
+<h3 id="UsnJrnl"><a href="#UsnJrnl" class="headerlink" title="$UsnJrnl"></a>$UsnJrnl</h3><p>它代表更新序列号 (USN) 日志。  它存在于 $Extend 记录中。  它包含有关文件系统中更改的所有文件的信息以及更改的原因。  它也被称为变更日志。 </p>
+<h3 id="MFT-资源管理器"><a href="#MFT-资源管理器" class="headerlink" title="MFT 资源管理器"></a>MFT 资源管理器</h3><p>MFT Explorer 是 Eric Zimmerman 用于探索 MFT 文件的工具之一。  它在命令行和 GUI 版本中均可用。  我们将为此任务使用 CLI 版本。 </p>
+<p> 打开提升的命令提示符（右键单击命令提示符，然后单击 <code>Run as Administrator</code>).  导航到目录 <code>C:\Users\THM-4n6\Desktop\Eztools</code>并运行命令 <code>MFTECmd.exe</code>.  您将看到以下选项： </p>
+<p>MFTECmd 解析来自 NTFS 文件系统创建的不同文件的数据，如 $MFT、$Boot 等。上面的屏幕截图显示了解析 MFT 文件的可用选项。  为了解析 $MFT 文件，我们可以使用以下命令： </p>
+<pre><code>MFTECmd.exe -f path-to- $MFT-file  --csv path-to-save-results-in-csv
+</code></pre>
+<p>然后，您可以使用 EZtools 文件夹中的  EZviewer 工具来查看 MFTECmd 的输出，或者在接下来的任务中查看 CSV 文件。  您会看到它列出了有关卷上所有文件的信息。   您可以类似地解析 $Boot 文件，该文件将提供有关卷的引导扇区的信息。  MFTECmd 目前不支持 $LOGFILE。 </p>
+<p>让我们解析该位置上的 MFT 文件 <code> C:\users\THM-4n6\Desktop\triage\C\</code>在附加的 VM 并回答以下问题。 目前，MFTECmd.exe 不支持 $Logfile。 </p>
+<h3 id="恢复已删除的文件"><a href="#恢复已删除的文件" class="headerlink" title="恢复已删除的文件"></a>恢复已删除的文件</h3><p><strong>删除的文件和数据恢复：</strong> </p>
+<p>了解文件系统可以更轻松地了解文件是如何删除、恢复和擦除的。  正如我们在前两个任务中了解到的，文件系统将文件在磁盘上的位置存储在表或数据库中。   当我们从文件系统中删除文件时，文件系统会删除存储文件在磁盘上的位置的条目。  对于文件系统，文件所在的位置现在可用于写入或未分配。   但是，磁盘上的文件内容仍然存在，只要它们在复制另一个文件时没有被文件系统覆盖，或者在对磁盘进行维护时没有被磁盘固件覆盖。 </p>
+<p>同样，磁盘上有数据在不同的未分配簇中，也有可能被恢复。  要恢复这些数据，我们必须了解不同文件类型的文件结构，以便通过我们在十六进制编辑器中看到的数据来识别特定文件。   但是，我们不会在这个房间里讨论这个问题。  我们要做的是使用一个工具来为我们完成这项工作，并识别磁盘映像文件中已删除的文件。   但什么是磁盘映像文件？ </p>
+<p>磁盘映像： </p>
+<p>磁盘映像文件是包含磁盘驱动器的逐位副本的文件。   逐位复制将磁盘映像文件中的所有数据（包括元数据）保存在单个文件中。  因此，在进行取证时，可以对物证（即磁盘）进行多份复制，并将它们用于调查。  这有两个方面的帮助。  1) 取证时原始证据不被污染，以及 2) 磁盘映像文件可以复制到另一个磁盘并在不使用专用硬件的情况下进行分析。 </p>
+<p>使用尸检恢复文件 </p>
+<p>说完这些，让我们看看如何从磁盘中恢复已删除的文件。 我们将使用尸检来恢复已删除的文件。 对于专门用于尸检的房间，您可以去 <a target="_blank" rel="noopener" href="https://tryhackme.com/room/btautopsye0">这里 </a>。 </p>
+<p>在附加的 VM ，您会在桌面上找到一个 Autopsy 图标。 双击它运行尸检。 您将看到以下屏幕： </p>
+<p>  数据源显示我们添加到尸检的数据源。  我们也可以添加更多来源。  文件视图和标签菜单显示尸检在处理数据后发现的内容。  展开数据源，然后单击 usb.001 设备。  Autopsy 将通过以下方式显示磁盘映像的内容： </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/61306d87a330ed00419e22e7/room-content/905832f92232c0e982fb84588d5fea1f.png" alt="img"></p>
+<p>磁盘的内容显示在右侧。  磁盘中存在的所有文件和文件夹都列在上方的选项卡中。  在下方的选项卡中，显示有关所选文件的详细信息。  有不同的选项可以在此处查看详细信息。  您可以查看它们以找到有趣的信息。 </p>
+<p>请注意上面屏幕截图中最后一个文件上的 X 标记，该文件名为 New Microsoft Excel Worksheet.xlsx~RFcd07702.TMP。   这表示这是一个已删除的文件。  删除的文件上会有这个 X 标记。  要恢复已删除的文件，请右键单击它，然后选择提取文件选项。 </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/61306d87a330ed00419e22e7/room-content/14acd357e9c89b8ce8297b076ed43c02.png" alt="img"></p>
+<p>提供保存提取文件的路径，您将恢复已删除的文件。  现在让我们看看您可以在此磁盘映像上找到哪些其他已删除的文件并回答以下问题。</p>
+<h3 id="执行证据-1"><a href="#执行证据-1" class="headerlink" title="执行证据"></a>执行证据</h3><p> 现在我们已经了解了文件系统，让我们了解在哪里可以找到文件系统中存在的工件以执行取证分析。  在此任务中，我们将研究为我们提供执行证据的工件： </p>
+<h2 id="Windows-预取文件"><a href="#Windows-预取文件" class="headerlink" title="Windows 预取文件"></a>Windows 预取文件</h2><p>当程序在 Windows 中运行时，它会存储其信息以供将来使用。  这些存储的信息用于在频繁使用的情况下快速加载程序。  此信息存储在预取文件中，这些文件位于 <code>C:\Windows\Prefetch</code>目录。 </p>
+<p>预取文件的扩展名为 <code>.pf</code>.  预取文件包含应用程序的最后运行时间、应用程序运行的次数以及文件使用的任何文件和设备句柄。  因此，它形成了有关上次执行的程序和文件的极好的信息来源。 </p>
+<p>我们可以使用 Eric Zimmerman 的工具中的 Prefetch Parser (PECmd.exe) 来解析 Prefetch 文件并提取数据。  当我们在提升的命令提示符下运行 PECmd.exe 时，我们得到以下输出：</p>
+<p>要在文件上运行 Prefetch Parser 并将结果保存在 CSV 中，我们可以使用以下命令： </p>
+<pre><code>PECmd.exe -f  --csv 
+</code></pre>
+<p>同样，要解析整个目录，我们可以使用以下命令： </p>
+<pre><code>PECmd.exe -d  --csv 
+</code></pre>
+<p>我们可以使用这些信息来回答最后的问题。</p>
+<h2 id="Windows-10-时间轴"><a href="#Windows-10-时间轴" class="headerlink" title="Windows 10 时间轴"></a>Windows 10 时间轴</h2><p>Windows 10 将最近使用的应用程序和文件存储在名为  Windows 10 时间线的 SQLite 数据库中。  该数据可以是关于最后执行的程序的信息源。   它包含被执行的应用程序和应用程序的焦点时间。  可以在以下位置找到 Windows 10 时间线： </p>
+<pre><code>C:\Users\\AppData\Local\ConnectedDevicesPlatform\&#123;randomfolder&#125;\ActivitiesCache.db
+</code></pre>
+<p><img src="/2022/10/15/tryhackme/image-20221204203845319.png" alt="image-20221204203845319">我们可以使用 Eric Zimmerman 的 WxTCmd.exe 来解析 Windows 10 Timeline。  当我们运行它时，我们得到以下选项：   </p>
+<p>我们可以使用以下命令来运行 WxTCmd： </p>
+<pre><code>WxTCmd.exe -f  --csv 
+</code></pre>
+<h2 id="Windows-跳转列表"><a href="#Windows-跳转列表" class="headerlink" title="Windows 跳转列表"></a>Windows 跳转列表</h2><p>Windows 引入了跳转列表，以帮助用户从任务栏直接转到他们最近使用的文件。  我们可以通过右键单击任务栏中的应用程序图标来查看跳转列表，它会向我们显示该应用程序中最近打开的文件。  此数据存储在以下目录中： </p>
+<pre><code>C:\Users\\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations
+</code></pre>
+<p>跳转列表包括有关执行的应用程序的信息、第一次执行时间和最后一次针对 AppID 执行应用程序的信息。 </p>
+<p>我们可以使用 Eric Zimmerman 的 JLECmd.exe 来解析跳转列表。  当我们运行它时，我们得到以下选项</p>
+<h3 id="文件-文件夹知识"><a href="#文件-文件夹知识" class="headerlink" title="文件/文件夹知识"></a>文件/文件夹知识</h3><p>Windows 为本地或远程打开的每个文件创建一个快捷方式文件。  快捷方式文件包含有关文件的第一次和最后一次打开时间以及打开文件的路径的信息，以及一些其他数据。  可以在以下位置找到快捷方式文件： </p>
+<pre><code>C:\Users\\AppData\Roaming\Microsoft\Windows\Recent\
+C:\Users\\AppData\Roaming\Microsoft\Office\Recent\
+</code></pre>
+<p>我们可以使用 Eric Zimmerman 的 LECmd.exe (Lnk Explorer) 来解析 Shortcut 文件。  当我们运行 LECmd.exe 时，我们会看到以下选项：</p>
+<h3 id="外部设备-USB-设备取证-1"><a href="#外部设备-USB-设备取证-1" class="headerlink" title="外部设备/USB 设备取证"></a>外部设备/USB 设备取证</h3><p>当任何新设备连接到系统时，与该设备的设置相关的信息存储在 <code>setupapi.dev.log</code>.  此日志位于以下位置： (标记)</p>
+<pre><code>C:\Windows\inf\setupapi.dev.log
+</code></pre>
+<p>此日志包含设备序列号和设备连接的第一次/最后一次。 </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/61306d87a330ed00419e22e7/room-content/da93720ac86a73115f4eeabd6581a5a7.png" alt="img"></p>
+<p>这是在 Notepad.exe 中打开时的样子。  注意我们可以看到设备 ID 和序列号的第一行。 </p>
+<h2 id="快捷方式文件"><a href="#快捷方式文件" class="headerlink" title="快捷方式文件"></a>快捷方式文件</h2><p>正如我们在上一个任务中了解到的，Windows  会自动为本地或远程打开的文件创建快捷方式文件。  这些快捷方式文件有时可以为我们提供有关连接的 USB 设备的信息。   它可以为我们提供有关卷名、类型和序列号的信息。  回顾之前的任务，可以在以下位置找到此信息： </p>
+<pre><code>C:\Users\\AppData\Roaming\Microsoft\Windows\Recent\
+C:\Users\\AppData\Roaming\Microsoft\Office\Recent\
+</code></pre>
+<p>由于我们已经在之前的任务中了解了如何使用 Eric Zimmerman 的 LECmd.exe 解析快捷方式文件，我们将不再重复。 </p>
+<h2 id="autopsy"><a href="#autopsy" class="headerlink" title="autopsy"></a>autopsy</h2><h3 id="工作流程概述和案例分析"><a href="#工作流程概述和案例分析" class="headerlink" title="工作流程概述和案例分析"></a>工作流程概述和案例分析</h3><p>基本 工作流程： </p>
+<ol>
+<li>为您将调查的数据源创建/打开案例 </li>
+<li>选择您要分析的数据源 </li>
+<li>配置摄取模块以从数据源中提取特定的工件 </li>
+<li>查看摄取模块提取的人工制品 </li>
+<li>创建报告 </li>
+</ol>
+<h3 id><a href="#" class="headerlink" title></a></h3><h3 id="Data-Sources"><a href="#Data-Sources" class="headerlink" title="Data Sources"></a><strong>Data Sources</strong></h3><p><strong>数据源</strong> </p>
+<p>尸检可以分析多种磁盘映像格式。 在进入数据分析步骤之前，让我们简要介绍一下 Autopsy 可以分析的不同数据源。 您可以使用 <strong>“添加数据源”</strong> 按钮添加数据源。 可用选项如下图所示。 </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/c75224413dfb9884adbdc8c5a778383d.png" alt="尸检 - 数据来源"></p>
+<p><strong>，我们将主要关注磁盘映像或 VM 文件选项。</strong>  </p>
+<p>支持的磁盘映像格式： </p>
+<ul>
+<li><strong>Raw Single</strong> （例如：*.img、*.dd、*.raw、*.bin） </li>
+<li><strong>原始拆分</strong> （例如：*.001、*.002、*.aa、*.ab 等） </li>
+<li><strong>EnCase</strong> （例如：*.e01、*.e02 等） </li>
+<li><strong>虚拟机</strong> （例如：*.vmdk、*.vhd） </li>
+</ul>
+<p>如果有多个图像文件（ei E01、E02、E03 等），Autopsy 只需要您指向第一个图像文件，Autopsy 将处理其余部分。  </p>
+<h3 id="Ingest-Modules-摄取模块"><a href="#Ingest-Modules-摄取模块" class="headerlink" title="Ingest Modules ( 摄取模块  )"></a><strong>Ingest Modules</strong> ( <strong>摄取模块</strong>  )</h3><p>本质 <strong>Ingest Modules</strong> 上是 Autopsy 插件。 每个摄取模块都设计用于分析和检索来自驱动器的特定数据。 您可以通过选择仪表板上可用的目标数据源，将 Autopsy 配置为在源添加阶段或之后运行特定模块。 默认情况下，摄取模块配置为在 <strong>所有文件、目录和未分配空间</strong> 。 您可以在模块选择步骤中更改此设置。 您可以通过右下角出现的栏来跟踪该过程。 </p>
+<p>下面的屏幕截图模拟了提到的两种使用摄取模块的不同方法。  请注意，使用摄取模块需要时间来实施。  因此，我们不会在这个房间讨论摄取模块。 </p>
+<p><strong>注意</strong> ：尸检将有关文件的元数据添加到本地数据库，而不是实际的文件内容。 </p>
+<p><strong>在添加数据源时配置摄取模块：</strong> </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-configure-modules.png" alt="Autopsy - 在添加数据源时配置摄取模块"></p>
+<p><strong>添加数据源后使用摄取模块：</strong> </p>
+<ol>
+<li>通过右键单击数据源打开“运行摄取模块”菜单。 </li>
+<li>选择要实施的模块并单击完成按钮。 </li>
+<li>跟踪实施进度。 </li>
+</ol>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/04138be7675286ea5f9066a893c0b199.png" alt="Autopsy - 添加数据源后使用摄取模块"></p>
+<p>您选择针对数据源运行的任何摄取模块的结果将填充树视图中的结果节点，树视图是 Autopsy 用户界面的左窗格。 下面是使用 <strong>“有趣的文件标识符”</strong> 摄取模块的示例。 请注意，结果取决于数据集。 如果您选择一个模块来检索驱动器中不可用的特定数据，则不会有任何结果。 </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/9ee9f606ea3444fd04c45b15c2c7f819.png" alt="验尸 - 摄取模块样本结果"></p>
+<p>将注意力拉回 Configure Ingest Modules 窗口，请注意一些 Ingest Modules 具有 <strong>每次运行设置</strong> ，而另一些则没有。 例如， <strong>关键字搜索</strong> 摄取模块没有每次运行设置。 相反， <strong>Interesting Files Finder</strong> Ingest Module 可以。 黄色三角形代表 <strong>“每次运行设置选项”</strong> 。 </p>
+<p>当 Ingest Modules 运行时，警报可能会出现在 <strong>Ingest Inbox</strong> 中。 下面是一些 Ingest 模块运行完成后的 Ingest Inbox 示例。 </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/212c83e75693ce2d8f485633a11dd697.png" alt="验尸 - 摄取收件箱"></p>
+<p> 要了解有关摄取模块的更多信息，请 <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/ingest_page.html">在此处 </a>。 </p>
+<h3 id="用户界面-I"><a href="#用户界面-I" class="headerlink" title="用户界面 I"></a>用户界面 I</h3><p><strong>树查看器</strong> </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-tree-view.png" alt="尸检 - 树视图"></p>
+<p>树 <strong>查看器</strong> 有 <strong>五个顶级节点</strong> ： </p>
+<ul>
+<li><strong>数据源</strong> - 所有数据的组织方式与您通常在普通 Windows 文件资源管理器中看到的一样。 </li>
+<li><strong>视图</strong> - 文件将根据文件类型、 MIME 类型、文件大小等 </li>
+<li><strong>结果</strong> - 如前所述，这是来自 Ingest Modules 的结果将出现的地方。 </li>
+<li><strong>标记</strong> - 将显示已标记的文件和/或结果（ <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/tagging_page.html">在此处 </a>）。 </li>
+<li><strong>报告</strong> - 将显示由模块或分析师生成的报告（ <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/reporting_page.html">在此处 </a>）。 </li>
+</ul>
+<p>上的 Autopsy 文档以 <strong>Tree Viewer</strong> 获取更多信息 <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/tree_viewer_page.html">此处 </a>。 </p>
+<p><strong>结果查看器</strong> </p>
+<p><strong>注意</strong> ：不要将结果节点（来自树查看器）与结果查看器混淆。 </p>
+<p>当  从树查看器中选择卷、文件、文件夹等时，有关所选项目的附加信息将显示在结果查看器中。 例如，选择了 Sample 案例的数据源，现在在 Results Viewer 中可以看到其他信息。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-table-view.png" alt="尸检 - 表格视图 1"></p>
+<p>如果选择了卷，结果查看器的信息将更改以反映所选卷的本地数据库中的信息。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-table-view2.png" alt="尸检 - 表格视图 2"></p>
+<p>请注意，Result Viewer 窗格具有三个选项卡： <strong>Table</strong> 、 <strong>Thumbnail</strong> 和 <strong>Summary</strong> 。 上面的屏幕截图反映了表选项卡中显示的信息。 缩略图选项卡最适用于图像或视频文件。 如果将以上数据的视图从Table改为Thumbnail，则显示的信息不多。 见下文。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-thumbnail-view.png" alt="尸检 - 缩略图视图"></p>
+<p>卷节点可以扩展，分析师可以像典型的 Windows 系统一样浏览卷的内容。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-volume.png" alt="尸检 - 体积"></p>
+<p>在 <strong>视图</strong> 树节点中，文件按文件类型分类 - <strong>按扩展名、按</strong>  <strong>MIME 类型</strong> 、 <strong>已删除的文件</strong> 和 <strong>按</strong>  <strong>文件大小</strong> 。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-views.png" alt="尸检 - 意见"> </p>
+<p><strong>提示</strong> ：谈到 <strong>文件类型</strong> 时，请注意此部分。 对手可以重命名具有误导性文件扩展名的文件。 因此，该文件将按 <strong>MIME</strong>  <strong>扩展</strong> ，但会按 <strong>类型 适当</strong> 。 Expand <strong>By Extension</strong> 会出现更多的子节点，进一步对文件进行分类（见下文）。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-byextension.png" alt="尸检 - 通过扩展"></p>
+<p>上的尸检文档以 <strong>结果查看器</strong> 获取更多信息 <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/result_viewer_page.html">此处 </a>。 </p>
+<p> 内容查看器 </p>
+<p> 在结果查看器的表选项卡中，如果单击任何文件夹/文件，附加信息将显示在内容查看器窗格中。 </p>
+<p> 在给定的图像中，三列可能无法快速理解它们代表什么。</p>
+<p>S = 分数   对于标记/标记为值得注意的文件夹/文件，分数将显示一个红色感叹号，对于标记/标记为可疑的文件夹/文件，将显示一个向下的黄色三角形。  这些项目可以由摄取模块或分析师标记/标记。</p>
+<p>C = 注释   如果注释栏中出现黄页，则表明该文件夹/文件有注释。        </p>
+<p>O = 发生    简而言之，此列将指示该文件/文件夹在过去的案例中被看到的次数（这将需要 Central Repository） </p>
+<p> 关键词搜索   在右上角，您会找到关键字列表和关键字搜索。  借助关键字搜索，分析师可以执行 AD-HOC 关键字搜索。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221203184109870.png" alt="image-20221203184109870"></p>
+<p> 在上图中，分析师搜索“秘密”一词。  以下是搜索结果。 </p>
+<p><img src="/2022/10/15/tryhackme/image-20221203184206135.png" alt="image-20221203184206135"></p>
+<p><strong>状态区</strong> </p>
+<p>最后， <strong>状态区</strong> 位于右下角。 当 Ingest Modules 运行时，该区域将显示一个进度条（以及完成的百分比）。 如果单击该栏，将提供有关摄取模块的更多详细信息。 </p>
+<p><img src="/2022/10/15/tryhackme/autopsy-statusbar2.png" alt="尸检 - 状态栏"></p>
+<p>如果 <code>X</code>单击（紧挨着进度条的），将出现确认是否要结束/取消摄取模块的提示。 </p>
+<p>参阅有关 UI 概述的尸检文档 <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/uilayout_page.html">此处 </a>。 </p>
+<h3 id="用户界面-I-I"><a href="#用户界面-I-I" class="headerlink" title="用户界面 I I"></a>用户界面 I I</h3><p>让我们看看在哪里可以轻松找到摘要信息。  汇总信息可以帮助分析人员通过评估可用的人工制品来决定重点关注的地方。  建议在开始调查之前查看数据源的摘要。  因此，您可以对系统和人工制品有一个大概的了解。 </p>
+<p><strong>数据源摘要</strong> </p>
+<p>。 <strong>数据源摘要</strong> 提供九个不同类别的摘要信息 请注意，这是对总调查结果的概述。 如果您想深入研究结果并寻找特定的人工制品，则需要使用 <strong>“结果查看器”</strong> 上一个任务中显示 </p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/a8ab6999fabaf538c2e9eb3742b0ff29.png" alt="尸检 - 数据源摘要"></p>
+<p><strong>生成报告</strong> </p>
+<p>您可以创建多种格式的调查结果报告，从而为您的调查案例创建数据表。 该报告提供了“结果查看器”窗格下列出的所有信息。 报告可以帮助您在完成现场调查后重新调查调查结果。 <strong>但是，报告没有额外的搜索选项，因此您必须手动查找感兴趣事件的人工制品。</strong> </p>
+<p><strong>提示：</strong> Autopsy 工具对于资源较少的系统来说可能很重。 因此，在资源匮乏的情况下使用 Autopsy 完成调查可能既缓慢又痛苦。  特别是浏览长结果可能会导致系统冻结。 您可以通过使用报告来避免这种情况。  您可以使用该工具解析数据并生成报告，然后通过生成的报告继续分析，而无需进行 Autopsy。 请注意，使用 GUI 进行和管理调查总是更容易。 </p>
+<p>您可以使用 <strong>“生成报告”</strong> 选项来创建报告。 步骤如下所示。  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/581fe3b1caa19ed94ad2564e3ecd8003.png" alt="Autopsy - Generate report"> </p>
+<p>一旦您选择了报告格式和范围，尸检将生成报告。您可以单击“HTML报告”部分（如上所示）以在浏览器上查看报告。报表在左侧包含所有“结果查看器”窗格结果。</p>
+<p> <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/68fc3dcf815f47183dd62c35438dc98c.png" alt="Autopsy - HTML report sample"> </p>
+<h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><h3 id="-1"><a href="#-1" class="headerlink" title></a></h3><h3 id="可视化工具"><a href="#可视化工具" class="headerlink" title="可视化工具"></a><strong>可视化工具</strong></h3><p>您可能已经注意到用户界面的其他部分尚未讨论。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-top-bar.png" alt="尸检 - 顶栏"></p>
+<p>请参阅以下可视化工具的尸检文档： </p>
+<ul>
+<li><strong>图片/视频：</strong> <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/image_gallery_page.html">http </a></li>
+<li><strong>通讯：</strong> <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/communications_page.html">http </a></li>
+<li><strong>时间轴：</strong> <a target="_blank" rel="noopener" href="http://sleuthkit.org/autopsy/docs/user-docs/4.12.0/timeline_page.html">http </a></li>
+</ul>
+<p><strong>注意</strong> ：在附加的 VM 中，您将 <strong>无法</strong> 除外 <strong>Timeline</strong> 。 下面是 <strong>时间线</strong> 。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline.png" alt="尸检 - 时间表"></p>
+<p><strong>时间线工具由三个区域组成：</strong> </p>
+<ol>
+<li><strong>过滤器：</strong> 根据过滤条件缩小显示的事件 </li>
+<li><strong>事件：</strong> 事件根据 <strong>视图模式</strong> </li>
+<li><strong>文件/内容：</strong> 此区域显示有关事件的其他信息 </li>
+</ol>
+<p><strong>共有三种视图模式：</strong> </p>
+<ol>
+<li><strong>计数：</strong> 事件数显示在条形图视图中 </li>
+<li><strong>细节：</strong> 显示事件信息，但它们是聚集和折叠的，所以UI不会过载 </li>
+<li><strong>列表：</strong> 事件显示在表格视图中 </li>
+</ol>
+<p>在上面的截图中，View Mode 是 <strong>Counts</strong> 。 下面是 <strong>详细信息</strong> 视图模式的屏幕截图。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline-details.png" alt="尸检 - 时间表详细信息"></p>
+<p>数字（如上所示）表示特定时间范围内聚集/折叠事件的数量。 例如，对于 /Windows，在 2009-06-10 和 2010-03-18 之间有 130,257 个事件。 请参见下图。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline-clustered.png" alt="尸检 - 时间线 clusted 1"></p>
+<p>要展开集群，请单击 <code>green icon with the plus sign</code>.  请参见下面的示例。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-cluster-expand.png" alt="尸检 - 群集展开"></p>
+<p>要折叠事件，请单击 <code>red icon with a minus sign</code>. 点击 <code>the map marker icon with a plus sign</code>如果您想固定一组事件。  这会将事件移动（固定）到事件视图的独立部分。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline-clustered2.png" alt="尸检 - 时间线聚集 2"></p>
+<p>要取消固定事件，请单击 <code>map marker with the minus sign</code>. 最后一组图标是 <code>eye</code>图标。  如果您希望从事件视图中隐藏一组事件，请单击 <code>eye with a minus sign</code>. 在下面的屏幕截图中，/Boot 的集群事件被隐藏并放置在 <code>Hidden Descriptions</code>（在过滤器区域）。 </p>
+<p> <img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline-hidden.png" alt="尸检 - 隐藏时间线"></p>
+<p>如果您希望撤消该操作并取消隐藏事件，请右键单击并选择 <code>Unhide and remove from list</code>.  请参见下面的示例。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline-unhide.png" alt="尸检 - 时间线取消隐藏"></p>
+<p>最后但 <strong>列表</strong> 视图模式的屏幕截图。 </p>
+<p><img src="https://assets.tryhackme.com/additional/autopsy/autopsy-timeline-list.png" alt="尸检 - 时间表列表"></p>
+<p>这些信息应该足以让您以一定的信心开始与时间轴进行交互。 </p>
+<h3 id="Disk-Analysis-amp-Autopsy"><a href="#Disk-Analysis-amp-Autopsy" class="headerlink" title="Disk Analysis &amp; Autopsy"></a>Disk Analysis &amp; Autopsy</h3><p><strong>Q1。E01 图像的 MD5 哈希值是多少？</strong></p>
+<p>这可以通过查看磁盘映像的元数据来获得：</p>
+<p><em>数据源 &gt; HASAN2.E01 &gt; 文件元数据</em></p>
+<p><strong>Q2。计算机帐户名称是什么？</strong></p>
+<p>这可以在<em>操作系统信息</em>部分找到：</p>
+<p><em>操作系统信息 &gt; 系统 &gt; 文件元数据</em></p>
+<p><img src="/2022/10/15/tryhackme/image-20221204185655054.png" alt="image-20221204185655054"></p>
+<p><strong>Q3. 列出所有用户帐户（按字母顺序排列）</strong></p>
+<p>详细信息可以在<em>操作系统用户帐户</em>部分找到：</p>
+<p><em>操作系统用户帐户 &gt; 用户名列</em><img src="/2022/10/15/tryhackme/image-20221204185852546.png" alt="image-20221204185852546"></p>
+<p><strong>Q4. 最后登录计算机的用户是谁？</strong></p>
+<p>检查<em>操作系统用户帐户</em>部分中的“<em>访问日期</em>”列。</p>
+<p><img src="/2022/10/15/tryhackme/image-20221204190008631.png" alt="image-20221204190008631"></p>
+<p><strong>Q5. 计算机的 IP 地址是什么？</strong></p>
+<p>要获取此信息，我们需要查看以下文件的内容：</p>
+<p><em>数据源 &gt; HASAN2.E01 &gt; Vol3 &gt; Program Files (x86) &gt; Look@LAN &gt; irunin.ini</em></p>
+<p><img src="/2022/10/15/tryhackme/image-20221204190224499.png" alt="image-20221204190224499"></p>
+<p><strong>Q6. 计算机的 MAC 地址是什么？(XX-XX-XX-XX-XX-XX)</strong></p>
+<p>这也可以在上面的<em>irunin.ini</em>文件中找到 - 请参阅*%LANNIC%*</p>
+<p><strong>Q7. 这台计算机上的网卡名称。</strong></p>
+<p>对于此信息，我们需要返回<em>操作系统信息</em>部分，选择<em>软件</em>，然后浏览至以下路径：</p>
+<p><em>ROOT/Microsoft/Windows NT/CurrentVersion/NetworkCards/2</em></p>
+<p><strong>Q8. 网络监控工具的名称是什么？</strong></p>
+<p>要回答这个问题，请查看<em>已安装程序</em>部分并查找与网络相关的程序（这可能有助于按升序对<em>程序名称列进行排序）：</em></p>
+<p><img src="/2022/10/15/tryhackme/image-20221204193423849.png" alt="image-20221204193423849"></p>
+<p> <strong>Q9. 用户为 Google 地图位置添加了书签。该位置的坐标是多少？</strong> <img src="/2022/10/15/tryhackme/image-20221204193505019.png" alt="image-20221204193505019"> <strong>Q10。用户的全名印在他的桌面墙纸上。用户的全名是什么？</strong> </p>
+<p> <em>像/视频</em>是查看的地方。具体来说，每个用户的文件夹： </p>
+<p> <img src="/2022/10/15/tryhackme/autopsy_question10.jpg" alt="img"> </p>
+<p>壁纸文件可以通过右键单击图像并选择“<em>导出</em>”从尸检中导出。</p>
+<p>导出后，可以在Autopsy VM 桌面上的“ <em>\Case Files\Export ”文件夹中找到。</em>查看此文件以获得答案。</p>
+<p><strong>Q11. 用户的桌面上有一个文件。它有一个标志，但她使用 PowerShell 更改了标志。第一面旗帜是什么？</strong></p>
+<p>我找到这个答案的过程是检查位于以下路径的每个用户的 PowerShell 历史文件：</p>
+<p><em>数据源 &gt; HASAN2.E01 &gt; Vol3 &gt; Users &gt; ‘username’ &gt; AppData &gt; Roaming &gt; Microsoft &gt; Windows &gt; PowerShell &gt; PSReadLine &gt; ConsoleHost_history.txt</em></p>
+<p><img src="/2022/10/15/tryhackme/image-20221204194232495.png" alt="image-20221204194232495"></p>
+<p><strong>Q12. 同一用户发现了一个可以提升计算机权限的漏洞。给设备所有者的信息是什么？</strong></p>
+<p>检查此用户桌面，我们找到一个名为“ <em>exploit.ps1</em> ”的文件，它将为我们提供所需的答案：</p>
+<p><img src="/2022/10/15/tryhackme/image-20221204194420648.png" alt="image-20221204194420648"></p>
+<p><strong>Q13. 在系统中发现了两个专注于密码的黑客工具。这些工具的名称是什么？（按字母顺序）</strong></p>
+<p>由于这些是黑客工具，Windows Defender 很有可能已经检测到这些工具。我们可以在这里查看 Windows Defender 的历史记录：</p>
+<p><em>数据源 &gt; HASAN2.E01 &gt; Vol3 &gt; Program Data &gt; Microsoft &gt; Windows Defender &gt; Scans &gt; History &gt; Service &gt; DetectionHistory &gt; 02</em></p>
+<p> <img src="/2022/10/15/tryhackme/autopsy_question13-1.jpg" alt="img"> </p>
+<p> <img src="/2022/10/15/tryhackme/autopsy_question13-2.jpg" alt="img"> <strong>14. 电脑上有一个YARA文件。检查文件。作者的名字是什么？</strong></p>
+<p>这个比我预期的要花更长的时间才找到！答案在一个扩展名为*.yar*的文件中，该文件可以在位于特定用户的下载文件夹中的存档中找到： <img src="/2022/10/15/tryhackme/autopsy_question14.jpg" alt="img"> </p>
+<p><strong>Q15. 其中一位用户想利用基于 MS-NRPC 的域控制器。您找到的存档的文件名是什么？（包括你答案中的空格）</strong></p>
+<p>对于最后一个问题，请查看“<em>最近的文档”</em>部分并对“<em>来源</em>”列进行排序以识别存档（漏洞名称应该向您尖叫！）</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">陈宸</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://wags-ctf.gitee.io/2022/10/15/tryhackme/">https://wags-ctf.gitee.io/2022/10/15/tryhackme/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">陈宸</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/CTF/">
+                                    <span class="chip bg-color">CTF</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
+                                    <span class="chip bg-color">网络攻防</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/10/15/wangxiangongxiang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="两台电脑通过网线连接之后共享文件">
+                        
+                        <span class="card-title">两台电脑通过网线连接之后共享文件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            只用一根网线快速传输
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/10/05/erweima/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/29.jpg" class="responsive-img" alt="微信招新群在此">
+                        
+                        <span class="card-title">微信招新群在此</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%A4%BE%E5%9B%A2/" class="post-category">
+                                    社团
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8B%9B%E6%96%B0/">
+                        <span class="chip bg-color">招新</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">网安社</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    
+	<script type="text/javascript">
+    var a_idx = 0;
+jQuery(document).ready(function ($) {
+    $("body").click(function (e) {
+        var a = new Array("安", "公","网","安","社");
+        var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+            y = e.pageY;
+        $i.css({
+            "z-index": 5,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "#FF0000"
+        });
+        $("body").append($i);
+        $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            3000,
+            function () {
+                $i.remove();
+            });
+    });
+    setTimeout('delay()', 2000);
+});
+
+function delay() {
+    $(".buryit").removeAttr("onclick");
+}
+
+    </script>
+
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "记得回来网安社~", clearTimeout(st)) : (document.title =
+            "你已进入网安社，前方高能！", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>     	
+</body>
+
+</html>
