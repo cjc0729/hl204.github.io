@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="[object Object], 网安社">
+    <meta name="keywords" content="在云端上搭hexo博客, 网安社">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>[object Object] | 网安社</title>
+    <title>在云端上搭hexo博客 | 网安社</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -191,12 +191,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/29.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">[object Object]</h1>
+                    <h1 class="description center-align post-title">在云端上搭hexo博客</h1>
                 </div>
             </div>
         </div>
@@ -312,8 +312,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/TypeScript/">
-                                <span class="chip bg-color">TypeScript</span>
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
                             </a>
                         
                     </div>
@@ -324,8 +324,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/TypeScript/" class="post-category">
-                                TypeScript
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
                             </a>
                         
                     </div>
@@ -379,29 +379,134 @@
 <h4 id="防火墙设置"><a href="#防火墙设置" class="headerlink" title="防火墙设置"></a>防火墙设置</h4><p>注意把ssh服务（即22号端口）和http服务（80端口）打开</p>
 <h3 id="3-使用Xshell连接"><a href="#3-使用Xshell连接" class="headerlink" title="3.使用Xshell连接"></a>3.使用Xshell连接</h3><p>购买完服务器后就可以远程连接了，这里推荐xshell远程连接；</p>
 <p>账号和密码在购买服务器时便已设定了，这里说一下要用公网ip连接</p>
-<p><img src="/2024/05/25/yundajian/Snipaste_2024-05-25_08-55-19.png"></p>
+<p><img src="/2024/05/25/yundajian/Snipaste_2024-05-25_08-55-19.png" alt="Snipaste_2024-05-25_08-55-19"></p>
 <p>之后选择属性，将用户名和密码填入即可登录</p>
 <p><img src="/2024/05/25/yundajian/Snipaste_2024-05-25_08-58-14.png"></p>
-<h3 id="3-在本地搭建hexo"><a href="#3-在本地搭建hexo" class="headerlink" title="3.在本地搭建hexo"></a>3.在本地搭建hexo</h3><p>之前已写，这里不再赘述。以上的是前期准备基础。</p>
-<h3 id="二、登录操作"><a href="#二、登录操作" class="headerlink" title="二、登录操作"></a>二、登录操作</h3><h3 id="1-安装配置git"><a href="#1-安装配置git" class="headerlink" title="1.安装配置git"></a>1.安装配置git</h3><p>1.安装依赖包环境</p>
-<pre class=" language-shell"><code class="language-shell">yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+<h3 id="3-在本地搭建hexo"><a href="#3-在本地搭建hexo" class="headerlink" title="3.在本地搭建hexo"></a>3.在本地搭建hexo</h3><p>后面，这里不再赘述。以上的是前期准备基础。</p>
+<h3 id="二、登录操作"><a href="#二、登录操作" class="headerlink" title="二、登录操作"></a>二、登录操作</h3><h3 id="1-安装配置git"><a href="#1-安装配置git" class="headerlink" title="1.安装配置git"></a>1.安装配置git</h3><h4 id="1-安装依赖包环境"><a href="#1-安装依赖包环境" class="headerlink" title="1.安装依赖包环境"></a>1.安装依赖包环境</h4><pre class=" language-shell"><code class="language-shell">yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 </code></pre>
-<p>2.安装编译工具</p>
-<pre class=" language-shell"><code class="language-shell">yum install -y gcc perl-ExtUtils-MakeMaker package
+<h4 id="2-安装编译工具"><a href="#2-安装编译工具" class="headerlink" title="2.安装编译工具"></a>2.安装编译工具</h4><pre class=" language-shell"><code class="language-shell">yum install -y gcc perl-ExtUtils-MakeMaker package
 </code></pre>
-<p>3.删除旧版本git</p>
-<p>这里吐槽一下，为啥到现在了yum支持的git版本还是1.18的</p>
+<h4 id="3-删除旧版本git"><a href="#3-删除旧版本git" class="headerlink" title="3.删除旧版本git"></a>3.删除旧版本git</h4><p>这里吐槽一下，为啥到现在了yum支持的git版本还是1.18的</p>
 <pre><code>yum remove git -y
 </code></pre>
-<p>4.进入家目录</p>
-<pre><code>cd
+<h4 id="4-进入家目录"><a href="#4-进入家目录" class="headerlink" title="4.进入家目录"></a>4.进入家目录</h4><pre><code>cd
 </code></pre>
-<p>5.下载git到家目录</p>
-<p>这里git选择2.34.0，如有更新，请自行到官网下载</p>
+<h4 id="5-下载git到家目录"><a href="#5-下载git到家目录" class="headerlink" title="5.下载git到家目录"></a>5.下载git到家目录</h4><p>这里git选择2.34.0，如有更新，请自行到官网下载</p>
 <pre><code>wget https://www.kernel.org/pub/software/scm/git/git-2.34.0.tar.gz --no-check-certificate
 </code></pre>
 <p>如果没有wget命令，请安装：</p>
 <pre><code>yum install wget -y
+</code></pre>
+<h4 id="6-解压文件"><a href="#6-解压文件" class="headerlink" title="6.解压文件"></a>6.解压文件</h4><pre><code>tar -zxf git-2.34.0.tar.gz
+</code></pre>
+<h4 id="7-安装git"><a href="#7-安装git" class="headerlink" title="7.安装git"></a>7.安装git</h4><p>进入到git目录下</p>
+<pre><code>cd git-2.34.0
+</code></pre>
+<p>编译</p>
+<pre><code>make all prefix=/uer/local/git
+</code></pre>
+<p>安装git到/usr/local/git下</p>
+<pre><code>make install prefix=/usr/local/git
+</code></pre>
+<h4 id="8-配置git环境变量"><a href="#8-配置git环境变量" class="headerlink" title="8.配置git环境变量"></a>8.配置git环境变量</h4><p>将git加入PATH目录中</p>
+<pre><code>echo &#39;export PATH=$PATH:/usr/local/git/bn&#39; &gt;&gt; /etc/bashrc
+</code></pre>
+<p>使配置生效</p>
+<pre><code>source /etc/bashrc
+</code></pre>
+<p>查看git版本</p>
+<pre><code>git --version
+</code></pre>
+<h3 id="2-配置用户并配置SSH免密登录"><a href="#2-配置用户并配置SSH免密登录" class="headerlink" title="2.配置用户并配置SSH免密登录"></a>2.配置用户并配置SSH免密登录</h3><h4 id="1-创建用户并设置密码"><a href="#1-创建用户并设置密码" class="headerlink" title="1.创建用户并设置密码"></a>1.创建用户并设置密码</h4><p>这里的username为你自己的用户名，并为用户名设置一个密码</p>
+<pre><code>adduser [username]
+passwd [username]
+</code></pre>
+<h4 id="2-为用户分配权限"><a href="#2-为用户分配权限" class="headerlink" title="2.为用户分配权限"></a>2.为用户分配权限</h4><pre><code>usermod [uesrname] -G wheel
+</code></pre>
+<h4 id="3-本机创建密钥"><a href="#3-本机创建密钥" class="headerlink" title="3.本机创建密钥"></a>3.本机创建密钥</h4><p>在本机电脑终端输入：</p>
+<pre><code>ssh-keygen -t rsa
+</code></pre>
+<p>然后一直回车，新建一个密钥</p>
+<p>终端上会显示你密钥创建的路径，找到它（id_rsa.pub文件）并用笔记本打开，复制里面的内容。</p>
+<h4 id="4-配置公钥"><a href="#4-配置公钥" class="headerlink" title="4.配置公钥"></a>4.配置公钥</h4><p>回到服务器终端，切换用户</p>
+<pre><code>su [username]
+</code></pre>
+<p>回到家目录</p>
+<pre><code>cd
+</code></pre>
+<p>创建.ssh文件夹</p>
+<pre><code>mkdir .ssh
+</code></pre>
+<p>新建authorized_keys</p>
+<pre><code>vim .ssh/authorized_keys
+</code></pre>
+<p>如果没有vim，请安装：</p>
+<pre><code>sudo yum -y vim
+</code></pre>
+<p>将复制的公钥内容复制到authorized_keys中，退出保存</p>
+<h3 id="3-git仓库配置"><a href="#3-git仓库配置" class="headerlink" title="3.git仓库配置"></a>3.git仓库配置</h3><h4 id="1-退出当前用户"><a href="#1-退出当前用户" class="headerlink" title="1.退出当前用户"></a>1.退出当前用户</h4><pre><code>exit
+</code></pre>
+<h4 id="2-此时为root用户，创建git目录，并修改目录所有权和用户权限"><a href="#2-此时为root用户，创建git目录，并修改目录所有权和用户权限" class="headerlink" title="2.此时为root用户，创建git目录，并修改目录所有权和用户权限"></a>2.此时为root用户，创建git目录，并修改目录所有权和用户权限</h4><pre><code>mkdir /home/git/
+chown -R [username]:[passwd] /home/git/
+chmod 755 /home/git/
+</code></pre>
+<h4 id="3-新建新的钩子文件"><a href="#3-新建新的钩子文件" class="headerlink" title="3.新建新的钩子文件"></a>3.新建新的钩子文件</h4><pre><code>vim /home/git/blog.git/hooks/post-receive
+</code></pre>
+<h4 id="4-进入文本编辑器中，粘贴下面两行"><a href="#4-进入文本编辑器中，粘贴下面两行" class="headerlink" title="4.进入文本编辑器中，粘贴下面两行"></a>4.进入文本编辑器中，粘贴下面两行</h4><pre><code>#！/bin/bash
+git --work-tree=/home/blog --git-dir=/home/git/blog.git checkout -f
+</code></pre>
+<h4 id="5-保存退出，然后修改文件权限"><a href="#5-保存退出，然后修改文件权限" class="headerlink" title="5.保存退出，然后修改文件权限"></a>5.保存退出，然后修改文件权限</h4><pre><code>chmod +x /home/git/blog.git/hooks/post-receive
+</code></pre>
+<h3 id="4-配置nginx"><a href="#4-配置nginx" class="headerlink" title="4.配置nginx"></a>4.配置nginx</h3><h4 id="1-首先创建blog目录用户转发"><a href="#1-首先创建blog目录用户转发" class="headerlink" title="1.首先创建blog目录用户转发"></a>1.首先创建blog目录用户转发</h4><pre><code>mkdir /home/blog/
+chown -R[username]:[passwd] /home/blog/
+chmod -R 755 /home/blog/
+</code></pre>
+<h4 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2.安装nginx"></a>2.安装nginx</h4><p>方法</p>
+<p>1.搜索阿里云镜像</p>
+<p>2.找epel镜像，输入到命令行中</p>
+<p><img src="/2024/05/25/yundajian/Snipaste_2024-05-25_16-11-56.png"></p>
+<p>3.输入命令安装nginx</p>
+<pre><code>yum install -y nginx
+</code></pre>
+<h4 id="3-启动nginx"><a href="#3-启动nginx" class="headerlink" title="3.启动nginx"></a>3.启动nginx</h4><pre><code>systemctl start nginx.service
+</code></pre>
+<h4 id="4-查看nginx服务状态，绿色的active即成功"><a href="#4-查看nginx服务状态，绿色的active即成功" class="headerlink" title="4.查看nginx服务状态，绿色的active即成功"></a>4.查看nginx服务状态，绿色的active即成功</h4><pre><code>systemctl status nginx.service
+</code></pre>
+<h4 id="5-查看nginx的默认配置文件的安装位置"><a href="#5-查看nginx的默认配置文件的安装位置" class="headerlink" title="5.查看nginx的默认配置文件的安装位置"></a>5.查看nginx的默认配置文件的安装位置</h4><pre><code>nginx -t
+</code></pre>
+<p>查看其中</p>
+<p><em>nginx: configuration file /etc/nginx/nginx.conf test is successful</em>中的文件，这里是<strong>configuration file /etc/nginx/nginx.conf</strong>,每个人可能不一样</p>
+<p>随后</p>
+<pre><code>vim configuration file /etc/nginx/nginx.conf
+</code></pre>
+<p>打开后找到下面位置并修改成</p>
+<pre><code>    server &#123;
+        listen       80;
+        listen       [::]:80;
+        server_name  [自己的公网ip或域名];
+        root         /home/blog;
+
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+
+        error_page 404 /404.html;
+        location = /404.html &#123;
+        &#125;
+</code></pre>
+<p>保存退出，重启nginx服务</p>
+<pre><code>systemctl restart nginx.service
+</code></pre>
+<h3 id="5-在hexo站点配置文件中配置"><a href="#5-在hexo站点配置文件中配置" class="headerlink" title="5.在hexo站点配置文件中配置"></a>5.在hexo站点配置文件中配置</h3><p>打开本地hexo博客所在文件，打开配置文件_config.yml</p>
+<p>找到并修改</p>
+<pre><code>deploy:
+  type: git
+  repository: [username]@[公网ip地址]:/home/git/blog.git
+  branch: master
+</code></pre>
+<h3 id="6-从本地上传hexo"><a href="#6-从本地上传hexo" class="headerlink" title="6.从本地上传hexo"></a>6.从本地上传hexo</h3><pre><code>hexo clean //清除本地缓存
+hexo g //生成网站静态文件到默认设置的 public 文件夹
+hexo d //生成静态网站，并部署到设定仓库
 </code></pre>
 
                 
@@ -419,7 +524,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">网安社</a>
+                    <a href="/about" rel="external nofollow noreferrer">陈继超</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -442,7 +547,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">网安社</a>
+                    <a href="/about" target="_blank">陈继超</a>
                     !
                 </span>
             </div>
@@ -467,8 +572,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/TypeScript/">
-                                    <span class="chip bg-color">TypeScript</span>
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
                                 </a>
                             
                         </div>
@@ -520,15 +625,15 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="[object Object]">
+                        <img src="/medias/featureimages/29.jpg" class="responsive-img" alt="在云端上搭hexo博客">
                         
-                        <span class="card-title">[object Object]</span>
+                        <span class="card-title">在云端上搭hexo博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            云端搭建hexo
                         
                     </div>
                     <div class="publish-info">
@@ -539,8 +644,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/TypeScript/" class="post-category">
-                                    TypeScript
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
                                 </a>
                             
                             
@@ -551,8 +656,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/TypeScript/">
-                        <span class="chip bg-color">TypeScript</span>
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>
