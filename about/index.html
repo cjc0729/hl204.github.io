@@ -471,7 +471,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["教程","电子取证","比赛","题解","社团","CTF","网络攻防","招新","硬件","美亚杯"]
+                data: ["教程","电子取证","比赛","题解","社团","CTF","网络攻防","硬件","招新","美亚杯"]
             }
         ],
         yAxis: [
@@ -814,7 +814,7 @@ $(function () {
     var a_idx = 0;
 jQuery(document).ready(function ($) {
     $("body").click(function (e) {
-        var a = new Array("安", "公","网","安","社");
+        var a = new Array("网","安","社");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
         var x = e.pageX,
