@@ -1,0 +1,1152 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="2024年FIC初赛题解, 网安社">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>2024年FIC初赛题解 | 网安社</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(http://r0wf6lwny.hn-bkt.clouddn.com/0a5b1d10e93c6c615c4bce0b218a657.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    	
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">网安社</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>主页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">网安社</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			主页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/34.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">2024年FIC初赛题解</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/">
+                                <span class="chip bg-color">电子取证</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/" class="post-category">
+                                电子取证
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-05-28
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-05-29
+                </div>
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="2024年FIC线上赛wp"><a href="#2024年FIC线上赛wp" class="headerlink" title="2024年FIC线上赛wp"></a>2024年FIC线上赛wp</h1><h2 id="手机部分"><a href="#手机部分" class="headerlink" title="手机部分"></a>手机部分</h2><p><strong>1、嫌疑人李某的手机型号是？</strong></p>
+<p>A. Xiaomi MI 2s</p>
+<p>B. Xiaomi MI 4</p>
+<p>C. Xiaomi MI 6</p>
+<p>D. Xiaomi MI 8</p>
+<pre><code>1.B
+</code></pre>
+<p>在useragent.txt中可以找到是MI 4LTE</p>
+<p><img src="/2024/05/28/FIC/image-20240525083024769.png" alt="image-20240525083024769"></p>
+<p><strong>2、嫌疑人李某是否可能有平板电脑设备，如有该设备型号是？</strong></p>
+<p>A. iPad Pro 11</p>
+<p>B. Vivo Pad 2</p>
+<p>C. MatePad Pro</p>
+<p>D. Xiaomi Pad 6s</p>
+<pre><code>2.D
+</code></pre>
+<p>在Wi-Fi连接记录中找到</p>
+<p><img src="/2024/05/28/FIC/image-20240525084031186.png" alt="image-20240525084031186"></p>
+<p><strong>3、嫌疑人李某手机开启热点设置的密码是?【答题格式：abc123】</strong></p>
+<pre><code>5aada11bc1b5
+</code></pre>
+<p>在移动热点中可以找到</p>
+<p>![屏幕截图 2024-05-25 084716](/屏幕截图 2024-05-25 084716.png)</p>
+<p><strong>4、嫌疑人李某的微信内部ID是？【答题格式：wxid_abc123】</strong></p>
+<pre><code>wxid_wnigmud8aj6j12
+</code></pre>
+<p>直接查看手机上微信的内部ID即可</p>
+<p><img src="/2024/05/28/FIC/image-20240525085331975.png" alt="image-20240525085331975"></p>
+<p><strong>5. 嫌疑人李某发送给技术人员的网站源码下载地址是什么【答题格式：<a target="_blank" rel="noopener" href="http://www.baidu.com/adc%E3%80%91">http://www.baidu.com/adc】</a></strong></p>
+<pre><code>http://www.honglian7001.com/down
+</code></pre>
+<p>在李某和赵老五的聊天记录中找到源码查看途径</p>
+<p><img src="/2024/05/28/FIC/image-20240525085813657.png" alt="image-20240525085813657"></p>
+<p>将二维码导出后，使用QR Research扫码可以得到密文，并知道加密方式为新佛曰</p>
+<p><img src="/2024/05/28/FIC/image-20240525085932894.png" alt="image-20240525085932894"></p>
+<p>在解密网站上解密即可</p>
+<p><img src="/2024/05/28/FIC/image-20240525090547624.png" alt="image-20240525090547624"></p>
+<p><strong>6、受害者微信用户ID是？【答题格式：abc123】</strong></p>
+<pre><code>limoon890
+</code></pre>
+<p>根据微信聊天记录分析，受害人微信名称为limoon，从而知道ID</p>
+<p><img src="/2024/05/28/FIC/image-20240525090914431.png" alt="image-20240525090914431"></p>
+<p><strong>7、嫌疑人李某第一次连接WIFI的时间是？</strong></p>
+<p>A. 03-14 15:55:57</p>
+<p>B. 03-14 16:55:57</p>
+<p>C. 03-14 17:55:57</p>
+<p>D. 03-14 18:55:57</p>
+<pre><code>7.B
+</code></pre>
+<p>找到WifiConfigStore.xml，可以看到CreationTime</p>
+<p><img src="/2024/05/28/FIC/image-20240525091348363.png" alt="image-20240525091348363"></p>
+<p><strong>8、分析嫌疑人李某的社交习惯，哪一个时间段消息收发最活跃？</strong></p>
+<p>A. 12:00-14:00</p>
+<p>B. 14:00-16:00</p>
+<p>C. 16:00-18:00</p>
+<p>D. 18:00-20:00</p>
+<pre><code>8.C
+</code></pre>
+<p>分析微信聊天记录时间即可</p>
+<p><strong>9、请分析嫌疑人手机，该案件团伙中，还有一名重要参与者警方未抓获，该嫌疑人所使用的微信账号ID为？【答题格式：wxid_abc123】</strong></p>
+<pre><code>wxid_06f01lnpavn722
+</code></pre>
+<p>分析聊天记录，发现还有一个名为“愚蠢的土拨鼠”的用户</p>
+<p><img src="/2024/05/28/FIC/image-20240525091801014.png" alt="image-20240525091801014"></p>
+<p>在通讯录中找到账号ID</p>
+<p><img src="/2024/05/28/FIC/image-20240525092156710.png" alt="image-20240525092156710"></p>
+<p><strong>10. 请分析嫌疑人手机，嫌疑人老板组织人员参与赌博活动，所使用的国内访问入口地址为？【答题格式：192.168.1.1:1000/abc】</strong></p>
+<pre><code>192.168.110.110:8000/login
+</code></pre>
+<p>嫌疑人老板就是上题找到的愚蠢的土拨鼠，在微信聊天记录中可以找到赌博网站的国内访问人口</p>
+<p><img src="/2024/05/28/FIC/image-20240525092336463.png" alt="image-20240525092336463"></p>
+<h2 id="服务器部分"><a href="#服务器部分" class="headerlink" title="服务器部分"></a>服务器部分</h2><h4 id="1、esxi服务器的esxi版本为？【关键字得分，答题格式：1-2】"><a href="#1、esxi服务器的esxi版本为？【关键字得分，答题格式：1-2】" class="headerlink" title="1、esxi服务器的esxi版本为？【关键字得分，答题格式：1.2】"></a><strong>1、esxi服务器的esxi版本为？【关键字得分，答题格式：1.2】</strong></h4><pre><code>6.7
+</code></pre>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-42-01.png" alt="Snipaste_2024-05-28_20-42-01"></p>
+<p>由火眼直接得出答案</p>
+<p>运行服务器虚拟机，这里火眼直接将密码清零了</p>
+<p>配置网卡</p>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-46-04.png" alt="Snipaste_2024-05-28_20-46-04"></p>
+<p>将服务器ip地址与网卡ip地址置于同一网段下</p>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-47-26.png" alt="Snipaste_2024-05-28_20-47-26"></p>
+<p>使用该网卡即可进入该集群中</p>
+<p><strong>2、请分析ESXi服务器，该系统的安装日期为：</strong></p>
+<p>A. 2024年3月12日 星期二 02:04:15 UTC</p>
+<p>B. 2024年3月12日 星期二 02:05:15 UTC</p>
+<p>C. 2024年3月12日 星期二 02:06:15 UTC</p>
+<p>D. 2024年3月12日 星期二 02:07:15 UTC</p>
+<pre><code>A
+</code></pre>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-48-59.png" alt="Snipaste_2024-05-28_20-48-59"></p>
+<p>直接查看即可</p>
+<p><strong>3、请分析ESXi服务器数据存储“datastore”的UUID是？【答题格式：a1a1-b1b1-c1c1-d1d1】</strong></p>
+<pre><code>65efb8a8-ddd817f6-04ff-000c297bd0e6
+</code></pre>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-50-24.png" alt="Snipaste_2024-05-28_20-50-24"></p>
+<p>看其他大佬说是要进入，通过命令挂载，我这好像直接就挂上去了</p>
+<p><strong>4、ESXI服务器的原IP地址？【答题格式：255.255.255.0】</strong></p>
+<pre><code>192.168.8.112
+</code></pre>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-55-05.png" alt="Snipaste_2024-05-28_20-55-05"></p>
+<p><strong>5、EXSI服务器中共创建了几个虚拟机？【答题格式：1】</strong></p>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-55-32.png" alt="Snipaste_2024-05-28_20-55-32"></p>
+<p>在更多服务器中能看到</p>
+<p><strong>6、网站服务器绑定的IP地址为？【答题格式：255.255.255.0】</strong></p>
+<pre><code>http://192.168.8.89/
+</code></pre>
+<p>www服务器是网站服务器</p>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_20-55-32.png" alt="Snipaste_2024-05-28_20-55-32"></p>
+<p><strong>7、网站服务器的登录密码为？【答题格式：abc123】</strong></p>
+<pre><code>qqqqqq
+</code></pre>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_21-01-30.png" alt="Snipaste_2024-05-28_21-01-30"></p>
+<p>使用hydra直接爆破网站服务器，密码是在带计算机中储存的，最后得出qqqqqq</p>
+<p><strong>8、网站服务器所使用的管理面板登陆入口地址对应的端口号为：【答案格式：1111】</strong></p>
+<pre><code>
+14131
+</code></pre>
+<p>登录到主机后发现宝塔</p>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_21-05-37.png" alt="Snipaste_2024-05-28_21-05-37"></p>
+<p><img src="/2024/05/28/FIC/Snipaste_2024-05-28_21-06-15.png" alt="Snipaste_2024-05-28_21-06-15"></p>
+<p>查看宝塔默认信息，发现端口</p>
+<p>重置密码，通过面板地址进入宝塔中</p>
+<p><strong>9、网站服务器的web目录是？【答题格式：/etc】</strong></p>
+<p>网站web目录最好寻找index.html</p>
+<h2 id="计算机部分"><a href="#计算机部分" class="headerlink" title="计算机部分"></a>计算机部分</h2><h4 id="1-分析技术员赵某的windows镜像，并计算赵某计算机的原始镜像的SHA1值为？忽略大小写"><a href="#1-分析技术员赵某的windows镜像，并计算赵某计算机的原始镜像的SHA1值为？忽略大小写" class="headerlink" title="1.分析技术员赵某的windows镜像，并计算赵某计算机的原始镜像的SHA1值为？忽略大小写"></a>1.<strong>分析技术员赵某的windows镜像，并计算赵某计算机的原始镜像的SHA1值为？忽略大小写</strong></h4><h6 id="FFD2777C0B966D5FC07F2BAED1DA5782F8DE5AD6"><a href="#FFD2777C0B966D5FC07F2BAED1DA5782F8DE5AD6" class="headerlink" title="FFD2777C0B966D5FC07F2BAED1DA5782F8DE5AD6"></a><code>FFD2777C0B966D5FC07F2BAED1DA5782F8DE5AD6</code></h6><p><img src="/2024/05/28/FIC/image-20240525092011649.png" alt="image-20240525092011649"></p>
+<p>火眼计算哈希</p>
+<h4 id="2-分析技术员赵某的windows镜像，疑似VeraCrypt加密容器的文件的SHA1值为？忽略大小写"><a href="#2-分析技术员赵某的windows镜像，疑似VeraCrypt加密容器的文件的SHA1值为？忽略大小写" class="headerlink" title="2.分析技术员赵某的windows镜像，疑似VeraCrypt加密容器的文件的SHA1值为？忽略大小写"></a>2.<strong>分析技术员赵某的windows镜像，疑似VeraCrypt加密容器的文件的SHA1值为？忽略大小写</strong></h4><h6 id="B25E2804B586394778C800D410ED7BCDC05A19C8"><a href="#B25E2804B586394778C800D410ED7BCDC05A19C8" class="headerlink" title="B25E2804B586394778C800D410ED7BCDC05A19C8"></a>B25E2804B586394778C800D410ED7BCDC05A19C8</h6><p><img src="/2024/05/28/FIC/image-20240525092340671.png" alt="image-20240525092340671"></p>
+<p><img src="/2024/05/28/FIC/image-20240525092316011.png" alt="image-20240525092316011"></p>
+<p>在火眼耗时任务中选择特征分析，可以看见一个VC容器。或者仿真后在虚拟机文档中发现一个疑似文件</p>
+<p><img src="/2024/05/28/FIC/image-20240525092647246.png" alt="image-20240525092647246"></p>
+<h4 id="3-据赵某供述，他会将常用的密码放置在一个文档内，分析技术员赵某的windows镜像，找到技术员赵某的密码字典，并计算该文件的SHA1值？忽略大小写"><a href="#3-据赵某供述，他会将常用的密码放置在一个文档内，分析技术员赵某的windows镜像，找到技术员赵某的密码字典，并计算该文件的SHA1值？忽略大小写" class="headerlink" title="3.据赵某供述，他会将常用的密码放置在一个文档内，分析技术员赵某的windows镜像，找到技术员赵某的密码字典，并计算该文件的SHA1值？忽略大小写"></a>3.<strong>据赵某供述，他会将常用的密码放置在一个文档内，分析技术员赵某的windows镜像，找到技术员赵某的密码字典，并计算该文件的SHA1值？忽略大小写</strong></h4><h6 id="E6EB3D28C53E903A71880961ABB553EF09089007"><a href="#E6EB3D28C53E903A71880961ABB553EF09089007" class="headerlink" title="E6EB3D28C53E903A71880961ABB553EF09089007"></a>E6EB3D28C53E903A71880961ABB553EF09089007</h6><p>仿真后同样在文档中发现commonPwd.txt，导出计算或者在火眼中找到计算</p>
+<h4 id="4-据赵某供述，他将加密容器的密码隐写在一张图片内，隐写在图片中的容器密码是？"><a href="#4-据赵某供述，他将加密容器的密码隐写在一张图片内，隐写在图片中的容器密码是？" class="headerlink" title="4. 据赵某供述，他将加密容器的密码隐写在一张图片内，隐写在图片中的容器密码是？"></a>4. <strong>据赵某供述，他将加密容器的密码隐写在一张图片内，隐写在图片中的容器密码是？</strong></h4><h6 id="qwerasdfzxcv"><a href="#qwerasdfzxcv" class="headerlink" title="qwerasdfzxcv"></a>qwerasdfzxcv</h6><p><img src="/2024/05/28/FIC/image-20240525093522479.png" alt="image-20240525093522479"></p>
+<p>隐写在虚拟机文档中的pswd.jpg，不是图片中的密码。可以直接右键用记事本打开，或者导出用010打开，最后就是真正的密码</p>
+<p>也可以在火眼耗时任务中选择隐写识别，直接看到隐藏文件</p>
+<p><img src="/2024/05/28/FIC/image-20240525093757135.png" alt="image-20240525093757135"></p>
+<h4 id="5-分析技术员赵某的windows镜像，bitlocker的恢复密钥是什么【答题格式：111111-222222-333333-444444-555555-666666-777777-888888】"><a href="#5-分析技术员赵某的windows镜像，bitlocker的恢复密钥是什么【答题格式：111111-222222-333333-444444-555555-666666-777777-888888】" class="headerlink" title="5. 分析技术员赵某的windows镜像，bitlocker的恢复密钥是什么【答题格式：111111-222222-333333-444444-555555-666666-777777-888888】"></a>5. <strong>分析技术员赵某的windows镜像，bitlocker的恢复密钥是什么【答题格式：111111-222222-333333-444444-555555-666666-777777-888888】</strong></h4><h6 id="404052-011088-453090-291500-377751-349536-330429-257235"><a href="#404052-011088-453090-291500-377751-349536-330429-257235" class="headerlink" title="404052-011088-453090-291500-377751-349536-330429-257235"></a>404052-011088-453090-291500-377751-349536-330429-257235</h6><p>在虚拟机中用上题得到的密码挂载VC，获得密钥</p>
+<p><img src="/2024/05/28/FIC/image-20240525094242249.png" alt="image-20240525094242249"></p>
+<h4 id="6-分析技术员赵某的windows镜像，bitlocker分区的起始扇区数是【答题格式：1024】"><a href="#6-分析技术员赵某的windows镜像，bitlocker分区的起始扇区数是【答题格式：1024】" class="headerlink" title="6. 分析技术员赵某的windows镜像，bitlocker分区的起始扇区数是【答题格式：1024】"></a>6. <strong>分析技术员赵某的windows镜像，bitlocker分区的起始扇区数是【答题格式：1024】</strong></h4><h6 id="146794496"><a href="#146794496" class="headerlink" title="146794496"></a>146794496</h6><p><img src="/2024/05/28/FIC/image-20240525094536708.png" alt="image-20240525094536708"></p>
+<p>在火眼分区详情能看见</p>
+<h4 id="7-分析技术员赵某的windows镜像，默认的浏览器是"><a href="#7-分析技术员赵某的windows镜像，默认的浏览器是" class="headerlink" title="7. 分析技术员赵某的windows镜像，默认的浏览器是"></a>7. <strong>分析技术员赵某的windows镜像，默认的浏览器是</strong></h4><h6 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h6><p><img src="/2024/05/28/FIC/image-20240525094713201.png" alt="image-20240525094713201"></p>
+<p>火眼基本信息中的默认浏览器可见</p>
+<h4 id="8-分析技术员赵某的windows镜像，私有聊天服务器的密码为【答题格式：abc123】"><a href="#8-分析技术员赵某的windows镜像，私有聊天服务器的密码为【答题格式：abc123】" class="headerlink" title="8. 分析技术员赵某的windows镜像，私有聊天服务器的密码为【答题格式：abc123】"></a>8. <strong>分析技术员赵某的windows镜像，私有聊天服务器的密码为【答题格式：abc123】</strong></h4><h6 id="Zhao"><a href="#Zhao" class="headerlink" title="Zhao"></a>Zhao</h6><p>虚拟机点E盘选择输入恢复密钥，打开E盘</p>
+<p><img src="/2024/05/28/FIC/image-20240525095119668.png" alt="image-20240525095119668"></p>
+<h4 id="9-分析技术员赵某的windows镜像，嫌疑人计算机中有疑似使用AI技术生成的进行赌博宣传的图片，该图片中，宣传的赌博网站地址为？【答题格式：www-baidu-com】"><a href="#9-分析技术员赵某的windows镜像，嫌疑人计算机中有疑似使用AI技术生成的进行赌博宣传的图片，该图片中，宣传的赌博网站地址为？【答题格式：www-baidu-com】" class="headerlink" title="9. 分析技术员赵某的windows镜像，嫌疑人计算机中有疑似使用AI技术生成的进行赌博宣传的图片，该图片中，宣传的赌博网站地址为？【答题格式：www.baidu.com】"></a>9. <strong>分析技术员赵某的windows镜像，嫌疑人计算机中有疑似使用AI技术生成的进行赌博宣传的图片，该图片中，宣传的赌博网站地址为？【答题格式：<a target="_blank" rel="noopener" href="http://www.baidu.com】/">www.baidu.com】</a></strong></h4><h6 id="www-585975-com"><a href="#www-585975-com" class="headerlink" title="www.585975.com"></a><a target="_blank" rel="noopener" href="http://www.585975.com/">www.585975.com</a></h6><p><img src="/2024/05/28/FIC/image-20240525095253668.png" alt="image-20240525095253668"></p>
+<p>E盘图片可见</p>
+<h4 id="10-分析技术员赵某的windows镜像，赵某使用的AI换脸工具名称为？"><a href="#10-分析技术员赵某的windows镜像，赵某使用的AI换脸工具名称为？" class="headerlink" title="10. 分析技术员赵某的windows镜像，赵某使用的AI换脸工具名称为？"></a>10. <strong>分析技术员赵某的windows镜像，赵某使用的AI换脸工具名称为？</strong></h4><h6 id="roop"><a href="#roop" class="headerlink" title="roop"></a>roop</h6><p><img src="/2024/05/28/FIC/image-20240525095425505.png" alt="image-20240525095425505"></p>
+<p>虚拟机D盘中能找到这个AI工具</p>
+<h4 id="11-分析技术员赵某的windows镜像，使用AI换脸功能生成了一张图片，该图片的名称为【答题格式：1-txt】"><a href="#11-分析技术员赵某的windows镜像，使用AI换脸功能生成了一张图片，该图片的名称为【答题格式：1-txt】" class="headerlink" title="11. 分析技术员赵某的windows镜像，使用AI换脸功能生成了一张图片，该图片的名称为【答题格式：1.txt】"></a>11. <strong>分析技术员赵某的windows镜像，使用AI换脸功能生成了一张图片，该图片的名称为【答题格式：1.txt】</strong></h4><h6 id="db-jpg"><a href="#db-jpg" class="headerlink" title="db.jpg"></a>db.jpg</h6><p><img src="/2024/05/28/FIC/image-20240525095732433.png" alt="image-20240525095732433"></p>
+<p>终端历史记录的powershell中可以找到这条命令</p>
+<h4 id="12-分析技术员赵某的windows镜像，ai换脸生成图片的参数中–similar-face-distance值为【答题格式：20-12】"><a href="#12-分析技术员赵某的windows镜像，ai换脸生成图片的参数中–similar-face-distance值为【答题格式：20-12】" class="headerlink" title="12. 分析技术员赵某的windows镜像，ai换脸生成图片的参数中–similar-face-distance值为【答题格式：20.12】"></a>12. <strong>分析技术员赵某的windows镜像，ai换脸生成图片的参数中–similar-face-distance值为【答题格式：20.12】</strong></h4><h6 id="0-85"><a href="#0-85" class="headerlink" title="0.85"></a>0.85</h6><p>同上题，也可以在虚拟机中打开该软件，发现相似度为0.85</p>
+<p><img src="/2024/05/28/FIC/image-20240525100026111.png" alt="image-20240525100026111"></p>
+<h4 id="13-分析技术员赵某的windows镜像，嫌疑人使用AI换脸功能所使用的原始图片名称为【答题格式：abc-txt】"><a href="#13-分析技术员赵某的windows镜像，嫌疑人使用AI换脸功能所使用的原始图片名称为【答题格式：abc-txt】" class="headerlink" title="13. 分析技术员赵某的windows镜像，嫌疑人使用AI换脸功能所使用的原始图片名称为【答题格式：abc.txt】"></a>13. <strong>分析技术员赵某的windows镜像，嫌疑人使用AI换脸功能所使用的原始图片名称为【答题格式：abc.txt】</strong></h4><h6 id="dst01-jpeg"><a href="#dst01-jpeg" class="headerlink" title="dst01.jpeg"></a>dst01.jpeg</h6><p>同11题</p>
+<h4 id="14-分析技术员赵某的windows镜像，赵某与李某沟通中提到的“二维码”解密所用的网站url地址为？【答题格式：http-www-baidu-com-1-html】"><a href="#14-分析技术员赵某的windows镜像，赵某与李某沟通中提到的“二维码”解密所用的网站url地址为？【答题格式：http-www-baidu-com-1-html】" class="headerlink" title="14. 分析技术员赵某的windows镜像，赵某与李某沟通中提到的“二维码”解密所用的网站url地址为？【答题格式：http://www.baidu.com/1.html】"></a>14. <strong>分析技术员赵某的windows镜像，赵某与李某沟通中提到的“二维码”解密所用的网站url地址为？【答题格式：<a target="_blank" rel="noopener" href="http://www.baidu.com/1.html%E3%80%91">http://www.baidu.com/1.html】</a></strong></h4><h6 id="http-hi-pcmoe-net-buddha-html"><a href="#http-hi-pcmoe-net-buddha-html" class="headerlink" title="http://hi.pcmoe.net/buddha.html"></a><a target="_blank" rel="noopener" href="http://hi.pcmoe.net/buddha.html">http://hi.pcmoe.net/buddha.html</a></h6><p><img src="/2024/05/28/FIC/image-20240525100232952.png" alt="image-20240525100232952"></p>
+<p>由二维码可知解密网站是佛曰，在火眼或者虚拟机的历史记录中都能找到</p>
+<h4 id="15-分析技术员赵某的windows镜像，赵某架设聊天服务器的原始IP地址为？【答题格式：192-168-1-1】"><a href="#15-分析技术员赵某的windows镜像，赵某架设聊天服务器的原始IP地址为？【答题格式：192-168-1-1】" class="headerlink" title="15. 分析技术员赵某的windows镜像，赵某架设聊天服务器的原始IP地址为？【答题格式：192.168.1.1】"></a>15. <strong>分析技术员赵某的windows镜像，赵某架设聊天服务器的原始IP地址为？【答题格式：192.168.1.1】</strong></h4><h6 id="192-168-8-17"><a href="#192-168-8-17" class="headerlink" title="192.168.8.17"></a>192.168.8.17</h6><p><img src="/2024/05/28/FIC/image-20240525100650630.png" alt="image-20240525100650630"></p>
+<p>通过admin和users判断应该是聊天服务器</p>
+<h4 id="16-分析技术员赵某的windows镜像，据赵某交代，其在窝点中直接操作服务器进行部署，环境搭建好了之后，使用个人计算机登录聊天室进行沟通，请分析赵某第一次访问聊天室的时间为？"><a href="#16-分析技术员赵某的windows镜像，据赵某交代，其在窝点中直接操作服务器进行部署，环境搭建好了之后，使用个人计算机登录聊天室进行沟通，请分析赵某第一次访问聊天室的时间为？" class="headerlink" title="16. 分析技术员赵某的windows镜像，据赵某交代，其在窝点中直接操作服务器进行部署，环境搭建好了之后，使用个人计算机登录聊天室进行沟通，请分析赵某第一次访问聊天室的时间为？"></a>16. <strong>分析技术员赵某的windows镜像，据赵某交代，其在窝点中直接操作服务器进行部署，环境搭建好了之后，使用个人计算机登录聊天室进行沟通，请分析赵某第一次访问聊天室的时间为？</strong></h4><h6 id="2024-03-14-20-32-08"><a href="#2024-03-14-20-32-08" class="headerlink" title="2024-03-14 20:32:08"></a>2024-03-14 20:32:08</h6><p><img src="/2024/05/28/FIC/image-20240525100920569.png" alt="image-20240525100920569"></p>
+<p>用访问时间排序</p>
+<h4 id="17-分析技术员赵某的windows镜像，openwrt的后台管理密码是"><a href="#17-分析技术员赵某的windows镜像，openwrt的后台管理密码是" class="headerlink" title="17. 分析技术员赵某的windows镜像，openwrt的后台管理密码是"></a>17. <strong>分析技术员赵某的windows镜像，openwrt的后台管理密码是</strong></h4><h6 id="hl-7001"><a href="#hl-7001" class="headerlink" title="hl@7001"></a>hl@7001</h6><p><img src="/2024/05/28/FIC/image-20240525101123296.png" alt="image-20240525101123296"></p>
+<p>火眼看见保存的密码</p>
+<h4 id="18-分析技术员赵某的windows镜像，嫌疑人可能使用什么云来进行文件存储？【答题格式：阿里云】"><a href="#18-分析技术员赵某的windows镜像，嫌疑人可能使用什么云来进行文件存储？【答题格式：阿里云】" class="headerlink" title="18. 分析技术员赵某的windows镜像，嫌疑人可能使用什么云来进行文件存储？【答题格式：阿里云】"></a>18. <strong>分析技术员赵某的windows镜像，嫌疑人可能使用什么云来进行文件存储？【答题格式：阿里云】</strong></h4><h6 id="易有云"><a href="#易有云" class="headerlink" title="易有云"></a>易有云</h6><p><img src="/2024/05/28/FIC/image-20240525101243981.png" alt="image-20240525101243981"></p>
+<p>在历史记录中发现许多易有云记录</p>
+<h4 id="19-分析技术员赵某的windows镜像，工资表密码是多少【答题格式：abc123】"><a href="#19-分析技术员赵某的windows镜像，工资表密码是多少【答题格式：abc123】" class="headerlink" title="19.分析技术员赵某的windows镜像，工资表密码是多少【答题格式：abc123】"></a>19.<strong>分析技术员赵某的windows镜像，工资表密码是多少【答题格式：abc123】</strong></h4><h6 id="aa123456"><a href="#aa123456" class="headerlink" title="aa123456"></a>aa123456</h6><p><img src="/2024/05/28/FIC/image-20240525101458664.png" alt="image-20240525101458664"></p>
+<p>文件在虚拟机E盘，可以用文档中的密码字典爆破</p>
+<p>输错两次后可以看见提示“aa”，字典中有aa的密码只有两个，手动尝试即可。</p>
+<h4 id="20-分析技术员赵某的windows镜像，张伟的工资是多少【答题格式：20】"><a href="#20-分析技术员赵某的windows镜像，张伟的工资是多少【答题格式：20】" class="headerlink" title="20.分析技术员赵某的windows镜像，张伟的工资是多少【答题格式：20】"></a>20.<strong>分析技术员赵某的windows镜像，张伟的工资是多少【答题格式：20】</strong></h4><h6 id="28300"><a href="#28300" class="headerlink" title="28300"></a>28300</h6><p><img src="/2024/05/28/FIC/image-20240525101752254.png" alt="image-20240525101752254"></p>
+<p>接上题打开名单，第一个就是</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">葛星宇，张博延，陈继超</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://120.27.139.213/2024/05/28/FIC/">https://120.27.139.213/2024/05/28/FIC/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">葛星宇，张博延，陈继超</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/">
+                                    <span class="chip bg-color">电子取证</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/05/28/FIC/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="2024年FIC初赛题解">
+                        
+                        <span class="card-title">2024年FIC初赛题解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2024年FIC初赛题解
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/" class="post-category">
+                                    电子取证
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/">
+                        <span class="chip bg-color">电子取证</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/05/25/yundajian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="在云端上搭hexo博客">
+                        
+                        <span class="card-title">在云端上搭hexo博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            云端搭建hexo
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">网安社</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    
+	<script type="text/javascript">
+    var a_idx = 0;
+jQuery(document).ready(function ($) {
+    $("body").click(function (e) {
+        var a = new Array("网","安","社");
+        var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+            y = e.pageY;
+        $i.css({
+            "z-index": 5,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "#FF0000"
+        });
+        $("body").append($i);
+        $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            3000,
+            function () {
+                $i.remove();
+            });
+    });
+    setTimeout('delay()', 2000);
+});
+
+function delay() {
+    $(".buryit").removeAttr("onclick");
+}
+
+    </script>
+
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "记得回来网安社~", clearTimeout(st)) : (document.title =
+            "你已进入网安社，前方高能！", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>     	
+</body>
+
+</html>
