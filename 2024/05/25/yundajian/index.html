@@ -349,7 +349,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-05-26
+                    2024-05-30
                 </div>
                 
 
@@ -378,8 +378,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="在云端上搭hexo博客"><a href="#在云端上搭hexo博客" class="headerlink" title="在云端上搭hexo博客"></a><center>在云端上搭hexo博客<center></center></center></h1><h1 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h1><h3 id="1-在相关网站购买云服务器"><a href="#1-在相关网站购买云服务器" class="headerlink" title="1.在相关网站购买云服务器"></a>1.在相关网站购买云服务器</h3><p>购买云服务器的地方有很多，像阿里云、华为云、腾讯云等等，具体选择综合考虑，我这里使用阿里云作演示。</p>
-<h4 id="选择操作系统镜像"><a href="#选择操作系统镜像" class="headerlink" title="选择操作系统镜像"></a>选择操作系统镜像</h4><p>介意选择centos7的，方便与我这边统一</p>
+                <h1 id="在云端上搭hexo博客"><a href="#在云端上搭hexo博客" class="headerlink" title="在云端上搭hexo博客"></a><center>在云端上搭hexo博客<center></center></center></h1><h2 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h2><h3 id="1-在相关网站购买云服务器"><a href="#1-在相关网站购买云服务器" class="headerlink" title="1.在相关网站购买云服务器"></a>1.在相关网站购买云服务器</h3><p>购买云服务器的地方有很多，像阿里云、华为云、腾讯云等等，具体选择综合考虑，我这里使用阿里云作演示。</p>
+<h4 id="选择操作系统镜像"><a href="#选择操作系统镜像" class="headerlink" title="选择操作系统镜像"></a>选择操作系统镜像</h4><p>介意选择centos7的</p>
 <p><img src="/2024/05/25/yundajian/Snipaste_2024-05-25_08-48-50.png" alt="服务器选择"></p>
 <h4 id="防火墙设置"><a href="#防火墙设置" class="headerlink" title="防火墙设置"></a>防火墙设置</h4><p>注意把ssh服务（即22号端口）和http服务（80端口）打开</p>
 <h3 id="3-使用Xshell连接"><a href="#3-使用Xshell连接" class="headerlink" title="3.使用Xshell连接"></a>3.使用Xshell连接</h3><p>购买完服务器后就可以远程连接了，这里推荐xshell远程连接；</p>
@@ -388,7 +388,7 @@
 <p>之后选择属性，将用户名和密码填入即可登录</p>
 <p><img src="/2024/05/25/yundajian/Snipaste_2024-05-25_08-58-14.png"></p>
 <h3 id="3-在本地搭建hexo"><a href="#3-在本地搭建hexo" class="headerlink" title="3.在本地搭建hexo"></a>3.在本地搭建hexo</h3><p>后面，这里不再赘述。以上的是前期准备基础。</p>
-<h1 id="二、登录操作"><a href="#二、登录操作" class="headerlink" title="二、登录操作"></a>二、登录操作</h1><h3 id="1-安装配置git"><a href="#1-安装配置git" class="headerlink" title="1.安装配置git"></a>1.安装配置git</h3><h4 id="1-安装依赖包环境"><a href="#1-安装依赖包环境" class="headerlink" title="1.安装依赖包环境"></a>1.安装依赖包环境</h4><pre class=" language-shell"><code class="language-shell">yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+<h2 id="二、登录操作"><a href="#二、登录操作" class="headerlink" title="二、登录操作"></a>二、登录操作</h2><h3 id="1-安装配置git"><a href="#1-安装配置git" class="headerlink" title="1.安装配置git"></a>1.安装配置git</h3><h4 id="1-安装依赖包环境"><a href="#1-安装依赖包环境" class="headerlink" title="1.安装依赖包环境"></a>1.安装依赖包环境</h4><pre class=" language-shell"><code class="language-shell">yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 </code></pre>
 <h4 id="2-安装编译工具"><a href="#2-安装编译工具" class="headerlink" title="2.安装编译工具"></a>2.安装编译工具</h4><pre class=" language-shell"><code class="language-shell">yum install -y gcc perl-ExtUtils-MakeMaker package
 </code></pre>
@@ -513,7 +513,7 @@ chmod -R 755 /home/blog/
 hexo g //生成网站静态文件到默认设置的 public 文件夹
 hexo d //生成静态网站，并部署到设定仓库
 </code></pre>
-<h1 id="三、配置免密登录（可选）"><a href="#三、配置免密登录（可选）" class="headerlink" title="三、配置免密登录（可选）"></a>三、配置免密登录（可选）</h1><h3 id="1-检查-ssh权限"><a href="#1-检查-ssh权限" class="headerlink" title="1.检查.ssh权限"></a>1.检查.ssh权限</h3><p>事先说明，这个免密登录我没有成功，不知道是哪个文件权限没给，但是这个是可选项，没成功不影响使用</p>
+<h2 id="三、配置免密登录（可选）"><a href="#三、配置免密登录（可选）" class="headerlink" title="三、配置免密登录（可选）"></a>三、配置免密登录（可选）</h2><h3 id="检查-ssh权限"><a href="#检查-ssh权限" class="headerlink" title="检查.ssh权限"></a>检查.ssh权限</h3><p>事先说明，这个免密登录我没有成功，不知道是哪个文件权限没给，如果哪位大佬知道，希望能指正。但是这个是可选项，没成功不影响使用</p>
 <p>回到家目录</p>
 <pre><code>cd
 </code></pre>
