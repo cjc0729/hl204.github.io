@@ -349,7 +349,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2024-05-30
                 </div>
                 
 
@@ -378,29 +378,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>hook基础搭建</p>
-<p>\1. 打开模拟器</p>
-<p><img src="/2022/11/01/hookjichu/wps10.jpg" alt="打开雷电模拟器"> </p>
-<p>\2. 在Windows下打开adb工具（或者使用Android studio）</p>
-<p>（1）win+R打开cmd:<code>adb devices //查看当前与连接的设备</code></p>
+                <h3 id="hook基础搭建"><a href="#hook基础搭建" class="headerlink" title="hook基础搭建"></a>hook基础搭建</h3><h4 id="1-打开模拟器"><a href="#1-打开模拟器" class="headerlink" title="\1. 打开模拟器"></a>\1. 打开模拟器</h4><p><img src="/2022/11/01/hookjichu/wps10.jpg" alt="打开雷电模拟器"> </p>
+<h3 id="2-在Windows下打开adb工具（或者使用Android-studio）"><a href="#2-在Windows下打开adb工具（或者使用Android-studio）" class="headerlink" title="\2. 在Windows下打开adb工具（或者使用Android studio）"></a>\2. 在Windows下打开adb工具（或者使用Android studio）</h3><p>（1）win+R打开cmd:<code>adb devices //查看当前与连接的设备</code></p>
 <p><img src="/2022/11/01/hookjichu/wps11.jpg"> </p>
 <p>（2）<code>adb shell //单个设备时的连接方式</code></p>
 <p><img src="/2022/11/01/hookjichu/wps12.jpg"> </p>
 <p><code>adb -s (设备名) shell //多个设备时的连接方式</code></p>
-<p>\3. frida环境安装（要提前安装python环境，最好是3.9版本）</p>
-<p>cmd:<code>pip install frida-tools</code><img src="/2022/11/01/hookjichu/wps13.jpg"></p>
+<h3 id="3-frida环境安装（要提前安装python环境，最好是3-9版本）"><a href="#3-frida环境安装（要提前安装python环境，最好是3-9版本）" class="headerlink" title="\3. frida环境安装（要提前安装python环境，最好是3.9版本）"></a>\3. frida环境安装（要提前安装python环境，最好是3.9版本）</h3><p>cmd:<code>pip install frida-tools</code><img src="/2022/11/01/hookjichu/wps13.jpg"></p>
 <p><code>frida --version //查看版本信息</code></p>
 <p><img src="/2022/11/01/hookjichu/wps14.jpg"> </p>
-<p>\4. 在官网上下载frida-server，为防止到时候出现问题，最好两个版本都下一下</p>
-<p><img src="/2022/11/01/hookjichu/wps15.jpg"> </p>
+<h3 id="4-在官网上下载frida-server，为防止到时候出现问题，最好两个版本都下一下"><a href="#4-在官网上下载frida-server，为防止到时候出现问题，最好两个版本都下一下" class="headerlink" title="\4. 在官网上下载frida-server，为防止到时候出现问题，最好两个版本都下一下"></a>\4. 在官网上下载frida-server，为防止到时候出现问题，最好两个版本都下一下</h3><p><img src="/2022/11/01/hookjichu/wps15.jpg"> </p>
 <p>将frida-server push到模拟器/真机的 /data/local/tmp目录下，然后进行提权</p>
 <p><code>adb push (frida的路径) /data/local/tmp</code></p>
 <p><code>adb shell  //连接模拟器</code></p>
 <p><code>chmod 777 frida  //提权</code></p>
 <p><code>./frida  //运行frida</code></p>
 <p><img src="/2022/11/01/hookjichu/wps16.jpg"> </p>
-<p>\5. objection工具</p>
-<p><code>pip install object //下载</code></p>
+<h3 id="5-objection工具"><a href="#5-objection工具" class="headerlink" title="\5. objection工具"></a>\5. objection工具</h3><p><code>pip install object //下载</code></p>
 <p><img src="/2022/11/01/hookjichu/wps17.jpg"> </p>
 <p>\6. HOOK</p>
 <p>打开另一个窗口，运行:</p>
